@@ -1,0 +1,16 @@
+<license>
+  <licensee>
+    <name>matthew.a.green@accenturefederal.com</name>
+  </licensee>
+  <product>PDFreactor</product>
+  <licensetype>Personal</licensetype>
+  <purchasedate>2017-05-22</purchasedate>
+  <outputformats>
+    <pdf/>
+  </outputformats>
+  <signatureinformation>
+    <signdate>2017-05-22 22:26</signdate>
+    <signature>302c02142126026f29d29003e0011b46e94719611f4004fb02142e182b44ab71714f913f3343fcf2c4c3c7a9e318</signature>
+    <checksum>1512</checksum>
+  </signatureinformation>
+</license>

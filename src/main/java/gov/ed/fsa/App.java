@@ -19,11 +19,11 @@ public class App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		PDFreactor pdfReactor = new PDFreactor();
-		
+		PDFreactor pdfReactor = new PDFreactor();		
 		Configuration configuration = new Configuration();
+		configuration.setLicenseKey("<license> <licensee> <name>matthew.a.green@accenturefederal.com</name> </licensee> <product>PDFreactor</product> <licensetype>Personal</licensetype> <purchasedate>2017-05-22</purchasedate> <outputformats> <pdf/> </outputformats> <signatureinformation> <signdate>2017-05-22 22:26</signdate> <signature>302c02142126026f29d29003e0011b46e94719611f4004fb02142e182b44ab71714f913f3343fcf2c4c3c7a9e318</signature> <checksum>1512</checksum> </signatureinformation> </license>");
 		
-		configuration.setDocument("<html><body>Hello World</body></html>");
+		configuration.setDocument("<html><body><h1>Hello World</h1><div><h3>Hello from Matt Green!!!</h3></div></body></html>");
 		
 		try {
 			Result result = pdfReactor.convert(configuration);
