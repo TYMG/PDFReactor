@@ -1,25 +1,39 @@
+
 PDFReactor Notes
 =============================
 A in-house reference guide of the [PDFreactor Manual](http://www.pdfreactor.com/product/doc/manual.pdf)
 
 - - -
-Add Content from the guide here to collect ideas for implementation:
+    Add Content from the guide here to collect ideas for implementation:
+
 
 PDFReactor API
 ==============================
 PDFReactor can be used through both an API and a Runnable Webservice Client. Both have their pros and cons.  
 
+
 API
 ------------------------------
+
+**Adding a CSS style sheet Using an API Method:**
+
+ ```java
+Java: config.setUserStyleSheets(new Resource().setUri("http://server/layout.css"));
+ ```
+
+
 
 Webservice
 ------------------------------
 
+
 API vs Webservice
 ------------------------------
 
+
 Solution
 ------------------------------
+
 
 CSS Directory
 ==============================
@@ -37,6 +51,12 @@ Example: A Page Counter used at the bottom right of the page to display the page
  }
 }
 ```
+
+
+
+## Footers
+
+
 
 Multiple Columns
 ------------------------------
