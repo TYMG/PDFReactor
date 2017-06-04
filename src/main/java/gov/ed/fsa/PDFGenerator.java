@@ -1,11 +1,15 @@
 package gov.ed.fsa;
 
+import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
+import java.awt.image.WritableRaster;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 
+import javax.imageio.ImageIO;
 import javax.xml.transform.TransformerException;
 
 import org.apache.commons.io.FileUtils;
@@ -28,6 +32,8 @@ public class PDFGenerator {
 		PDFreactor pdfReactor = new PDFreactor();	
 		this.setPdfReactor(pdfReactor);
 		Configuration config = new Configuration();
+		config.setFullCompression(true);
+		//config.setConformance(Conformance.PDFA3A_PDFUA1);
 		this.setConfig(config);
 		MustacheTemplateInjector mti =  new MustacheTemplateInjector();
 		this.setMustacheTemplateInjector(mti);
@@ -35,10 +41,15 @@ public class PDFGenerator {
 	}
 	
 	public void generatePDF(String fileName){
-		
+	/*	try {
+			extractBytes("test");
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}*/
 		config.setUserStyleSheets(new Resource().setContent(retrieveCSSStyling("teest")));
 		config.setDocument(mti.toHtml(fileName));
-		
+		//config.setBaseURL("file:///directory/");
 		
 		try {
 			Result result = pdfReactor.convert(config);
@@ -84,6 +95,20 @@ public class PDFGenerator {
 		return mustacheTemplateWriter.toString();
 	}
 
+	
+	public byte[] extractBytes (String ImageName) throws IOException {
+		Object  local =this.getClass().getClassLoader().getResourceAsStream("smiley.jpg");
+		// open image
+		 File imgPath = new File(local.toString());
+		 BufferedImage bufferedImage = ImageIO.read(imgPath);
+
+		 // get DataBufferBytes from Raster
+		 WritableRaster raster = bufferedImage .getRaster();
+		 DataBufferByte data   = (DataBufferByte) raster.getDataBuffer();
+
+		 return ( data.getData() );
+	}
+	
 	public PDFreactor getPdfReactor() {
 		return pdfReactor;
 	}

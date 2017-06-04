@@ -1,16 +1,20 @@
 package gov.ed.fsa;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringWriter;
-import java.nio.charset.StandardCharsets;
+import java.util.Calendar;
 import java.util.HashMap;
-
-import org.apache.commons.io.IOUtils;
 
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
+
+import gov.ed.fsa.form.EAForm;
+import gov.ed.fsa.model.Borrower;
+import gov.ed.fsa.model.EAMPNPerson;
+import gov.ed.fsa.model.Employer;
+import gov.ed.fsa.model.Reference;
+import gov.ed.fsa.model.School;
+import gov.ed.fsa.model.Student;
 
 public class MustacheTemplateInjector {
 
@@ -30,10 +34,232 @@ public class MustacheTemplateInjector {
 		// Use Mustache to create a template of type HTML from the input
 		// stream
 		HashMap<String, Object> scopes = new HashMap<String, Object>();
-		scopes.put("name", "Matt");
+		//Endorser 
+		EAForm eaForm = createEAForm();
+		scopes.put("eaForm", eaForm );
+		MustacheTemplateInjectorHelper helper = new MustacheTemplateInjectorHelper();
+		helper.determineCitizenshipStatus(eaForm.getEndorser().getCitizenshipStatus());
+		helper.determineReference1Address2(eaForm.getReference1().getAddressLine2());
+		helper.determineReference2Address2(eaForm.getReference2().getAddressLine2());
+		helper.determineBorrowerAddress2Tag(eaForm.getBorrower().getAddressLine2());
+		helper.setTodaysDate();
+		scopes.put("helper",helper);
+		scopes.put("endsr-info__ssn", "123456789");
+		
+		//Reference
+		
+		//Borrower
+		
+		//Dependent Undergraduate
+		
+		//Endorser Signature
+		scopes.put("checked", "checked");
 		// This will fill in the data from the scopes HashMap we built into
 		// the html template
 		template.execute(mustacheExecutioner, scopes);
 		return mustacheExecutioner.toString();
 	}
+
+	public EAForm createEAForm(){	
+		EAMPNPerson endorser = createEndorser();
+		EAForm eaForm = new EAForm(createEndorser(),createReference1(),createReference2(),createBorrower(),createStudent(), createSchool(), createEmployer());
+		return eaForm;
+	}
+
+	private Student createStudent() {
+		Student student = new Student();
+		student.setName("Bobby Brown");
+		student.setSsn("123459999");
+		return student;
+	}
+
+	private School createSchool() {
+		School school = new School();
+		school.setAddress1("000 Ripoff Dr SE");
+		school.setName("IT Tech");
+		school.setCityStateZip("Washington, D.C., 20009");
+		return school;
+	}
+
+	private Borrower createBorrower() {
+		Borrower borrower = new Borrower();
+		borrower.setName("Lochness Monster");
+		borrower.setSsn("987654321");
+		borrower.setDob("7/7/1977");
+		borrower.setAddressLine1("23 Strawberry Ln");
+		borrower.setAddressLine2("Apt 999");
+		borrower.setCityStateZip("Loch Lake, MD, 06660");
+		borrower.setLoanIdentificationNumber("334567DFG54678GHJKL99");
+		borrower.setDirectPLUSLoanAmount("$3.50");
+		borrower.setPhoneNumber("(123) 666-5000");
+		borrower.setSchoolName("IT Tech");
+		borrower.setSchoolAddress("000 Ripoff Dr SE");
+		return borrower;
+	}
+
+	private Reference createReference1() {
+		Reference reference1 = new Reference();
+		reference1.setFirstName("Johnny");
+		reference1.setMiddleInitial("Z");
+		reference1.setLastName("Quest");
+		reference1.setAddressLine1("333 Quest Ln");
+		reference1.setAddressLine2("Apt 456");
+		reference1.setCity("New York");
+		reference1.setState("NY");
+		reference1.setZipCode("99999");
+		reference1.setEmail("Johnny@Quest.com");
+		reference1.setPhoneNumber("(561) 455-5000");
+		return reference1;
+	}
+	
+	private Reference createReference2() {
+		Reference reference2 = new Reference();
+		reference2.setFirstName("Race");
+		reference2.setMiddleInitial("J");
+		reference2.setLastName("Bannon");
+		reference2.setAddressLine1("333 Quest Ln");
+		reference2.setAddressLine2("Apt 456");
+		reference2.setCity("New York");
+		reference2.setState("NY");
+		reference2.setZipCode("99999");
+		reference2.setEmail("RaceBannon@Quest.com");
+		reference2.setPhoneNumber("(561) 999-6660");
+
+		return reference2;
+	}
+
+	private Employer createEmployer() {
+		Employer employer = new Employer();
+		employer.setName("Sanford and Son's");
+		employer.setAddress("12345 Junkyard Rd");
+		employer.setCityStateZip("Arlington, VA, 90990");
+		employer.setWorkPhone("(703) 666-0000");
+		return employer;
+	}
+	
+	
+
+	private EAMPNPerson createEndorser() {
+		EAMPNPerson endorser = new EAMPNPerson();
+		endorser.setName("Ginuwine");
+		endorser.setSsn("123456789");
+		endorser.setDob("6/6/1996");
+		endorser.setAddressLine1("123 G Street");
+		endorser.setAddressLine2("Apt 666");
+		endorser.setCityStateZip("Washington, D.C., 20009");
+		endorser.setMailingAddressLine1("666 M Street");
+		endorser.setMailingAddressLine2("Apt 123");
+		endorser.setMailingCityStateZip("Washington, D.C., 20009");
+		endorser.setPhoneNumber("(281) 330-8004");
+		endorser.setDlState("MD");
+		endorser.setDlNum("12000000478DHH7788");
+		endorser.setEmail("WhoIsMikeJones@test.gov");
+		endorser.setCitizenshipStatus("OTHER");
+		endorser.setAlienReg("VGVHG748320932");
+		return endorser;
+	}
+	 static class MustacheTemplateInjectorHelper {
+		   
+		    	String isUSCitzen;
+		    	String isPermanentResidentOther;
+		    	String isReference1Address2;
+		    	String isReference2Address2;
+		    	String isBorrowerAddress2PTag;
+		    	String isBorrowerAddress2PTagEnd;
+		    	String todaysDate;
+		    	
+				
+				public String getIsUSCitzen() {
+					return isUSCitzen;
+				}
+				public void setIsUSCitzen(String isUSCitzen) {
+					this.isUSCitzen = isUSCitzen;
+				}
+				public String getIsPermanentResidentOther() {
+					return isPermanentResidentOther;
+				}
+				public void setIsPermanentResidentOther(String isPermanentResidentOther) {
+					this.isPermanentResidentOther = isPermanentResidentOther;
+				}
+				
+				public void determineCitizenshipStatus(String endorserCitizenship){
+					switch(endorserCitizenship){
+					case "US":
+						setIsUSCitzen("checked");
+						setIsPermanentResidentOther("");
+						break;
+					case "OTHER":
+						setIsUSCitzen("");
+						setIsPermanentResidentOther("checked");
+						break;
+					}
+					
+				}
+				public String getIsReference1Address2() {
+					return isReference1Address2;
+				}
+				
+				public void determineReference1Address2(String addressLine2){
+					if(addressLine2 != null && !addressLine2.isEmpty() ){
+						setIsReference1Address2(", ");
+						return;
+					}
+						setIsReference1Address2("");
+				}
+				public void determineReference2Address2(String addressLine2){
+					if(addressLine2 != null && !addressLine2.isEmpty() ){
+						setIsReference2Address2(", ");
+						return;
+					}
+						setIsReference2Address2("");
+				}
+				
+				public void setIsReference1Address2(String isReference1Address2) {
+					this.isReference1Address2 = isReference1Address2;
+				}
+				public String getIsReference2Address2() {
+					return isReference2Address2;
+				}
+				public void setIsReference2Address2(String isReference2Address2) {
+					this.isReference2Address2 = isReference2Address2;
+				}
+				
+				public void determineBorrowerAddress2Tag(String addressLine2){
+					if(addressLine2 != null && !addressLine2.isEmpty() ){
+						 setIsBorrowerAddress2PTag("<p class=\"field-response-padding\">");
+						setIsBorrowerAddress2PTagEnd("</p>");		
+						return;
+					}
+					 setIsBorrowerAddress2PTag("");
+						setIsBorrowerAddress2PTagEnd("");						}
+				
+				public String getIsBorrowerAddress2PTag() {
+					return isBorrowerAddress2PTag;
+				}
+				public void setIsBorrowerAddress2PTag(String isBorrowerAddress2PTag) {
+					this.isBorrowerAddress2PTag = isBorrowerAddress2PTag;
+				}
+				public String getIsBorrowerAddress2PTagEnd() {
+					return isBorrowerAddress2PTagEnd;
+				}
+				public void setIsBorrowerAddress2PTagEnd(String isBorrowerAddress2PTagEnd) {
+					this.isBorrowerAddress2PTagEnd = isBorrowerAddress2PTagEnd;
+				}
+				public String getTodaysDate() {
+					return todaysDate;
+				}
+				public void setTodaysDate() {
+					this.todaysDate = Calendar.getInstance().getTime().toString();
+				}
+		    	
+	 }
+	 
+	 static class Person {
+		    Person(String name) {
+		       this.name = name;
+		    }
+		    String name;
+		  }
 }
+
+

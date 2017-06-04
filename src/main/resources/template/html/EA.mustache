@@ -1,8 +1,2248 @@
 <html>
-	<body>
-		<h1>Hello World</h1>
-		<div>
-			<h3>Hello from {{name}}!!!</h3>
+<head>
+<title>Endorser Addendum to Master Promissory Note for PLUS
+	Loans</title>
+</head>
+<footer>Test</footer>
+<div id="page__1" class="form__header">
+	<div id="page__1-title" class="form__section-header flexbox-row">
+		<div class="form__header-icon">
+			<img class="icon"
+				src="http://2.bp.blogspot.com/-cFAE-3B8WiE/UDDVCyEIBVI/AAAAAAAAAgw/LhtUHGISKxI/s1600/happy-face_happyface_smiley_2400x2400.jpg"
+				alt="" title="">
 		</div>
-	</body>
+		<div class="form__header-title">
+			<p>Endorser Addendum to Master Promissory Note for PLUS Loans</p>
+			<div class=table-space></div>
+			<p>William D. Ford Federal Direct Loan Program</p>
+		</div>
+		<div class="form__header-omb">
+			<p>OMB No. 666</p>
+			<p>Form Approved</p>
+			<p>Exp Data 6/6/6</p>
+		</div>
+	</div>
+	<div id="page__1-warning" class="form__section-warning">
+		<p class="pink">
+			<strong>Warning:</strong> Any person who knowingly makes a false
+			statement or misrepresentation on this form or any accompanying
+			document is subject to penalties that may include fines,
+			imprisonment, or both, under the U.S. Criminal and 20 U.S.C. 1097.
+		</p>
+	</div>
+	<div id="page__1-byb">
+		<b>BEFORE YOU BEGIN</b>
+		<hr />
+		<div>
+			<p>Before you begin, read the Instructions on page 14 of this
+				Addendum.</p>
+			<br>
+			<p>By signing this Endorser Addendum (Addendum), you agree to
+				repay the borrower's Direct PLUS Loan under the terms and conditions
+				of the Master Promissory Note (MPN) for Direct PLUS Loans signed by
+				the borrower if the borrower does not repay the loan. The terms and
+				conditions of the loan are presented in the MPN Terms and Conditions
+				section of this Addendum and in the Borrower's Rights and
+				Responsibilities Statement that accompanies this Addendum.</p>
+		</div>
+	</div>
+	<div id="page__1-form-section" class="form__section-fields ">
+		{{#eaForm}}
+		<div id="endorser_info">
+			<b>ENDORSER INFORMATION</b>
+			<hr />
+			<div class="flexbox-row">
+				<div class="flex-1 form__section-endr-info ">
+					<div class="medium_endsr_field">
+
+						<span><b>1.</b> Name (First, Middle Initial, Last)</span>
+						<p class="field-response-padding">{{eaForm.endorser.name}}</p>
+					</div>
+					<div>
+						<span><b>2.</b> Social Security Number</span>
+						<p class="field-response-padding">{{eaForm.endorser.ssn}}</p>
+					</div>
+					<div>
+						<span><b>3.</b> Borrower's Date of Birth</span>
+						<p class="field-response-padding">{{eaForm.endorser.dob}}</p>
+					</div>
+					<div class="large_endsr_field">
+						<span><b>4.</b> Permanent Address(see instructions)</span>
+						<table class="tg">
+							<tr>
+								<th class="tg-yw4l">Permanent Address</th>
+								<th class="tg-yw4l">Mailing Address</th>
+							</tr>
+							<tr>
+								<td class="tg-031e field-response-padding">{{eaForm.endorser.addressLine1}}</td>
+								<td class="tg-031e column2">{{eaForm.endorser.mailingAddressLine1}}</td>
+							</tr>
+							<tr>
+								<td class="tg-031e field-response-padding">{{eaForm.endorser.addressLine2}}</td>
+								<td class="tg-031e column2">{{eaForm.endorser.mailingAddressLine2}}</td>
+							</tr>
+							<tr>
+								<td class="tg-031e field-response-padding">{{eaForm.endorser.cityStateZip}}</td>
+								<td class="tg-031e column2">{{eaForm.endorser.mailingCityStateZip}}</td>
+							</tr>
+						</table>
+					</div>
+					<div>
+						<span><b>5.</b> Area Code/Telephone Number</span>
+						<p class="field-response-padding">{{eaForm.endorser.phoneNumber}}</p>
+
+					</div>
+					<div>
+						<span><b>6.</b> Driver's License State and Number</span>
+						<p class="field-response-padding">{{eaForm.endorser.dlState}}-{{eaForm.endorser.dlNum}}</p>
+
+					</div>
+					<div>
+						<span><b>7.</b> Email Address (optional)</span>
+						<p class="field-response-padding">{{eaForm.endorser.email}}</p>
+
+					</div>
+				</div>
+				<div class="flex-1">
+					<div style="display: flex; flex-flow: column">
+						<div>
+							<b>8.</b> Citizenship Status (check one)
+						</div>
+						<div class="citzenship_status">
+							<div>
+								(1)<input id="checkBox" type="checkbox"{{helper.isUSCitzen}}>U.S
+								Citizen or National
+							</div>
+							<div>
+								(2)<input id="checkBox" type="checkbox"{{helper.isPermanentResidentOther}}>Permanent
+								Resident/Other Eligible Non-Citizen
+							</div>
+							<div>If (2), Alien Registration Number</div>
+							<p class="field-response-padding">{{eaForm.endorser.alienReg}}</p>
+
+						</div>
+						<div class="large_endsr_field">
+							<span><b>9.</b> Employer's Name</span>
+							<p class="field-response-padding">{{eaForm.employer.name}}</p>
+
+						</div>
+						<div class="medium_endsr_field">
+							<span><b>10.</b> Employer's Address (Street, City, State,
+								Zip Code)</span>
+							<p class="field-response-padding">{{eaForm.employer.address}}</p>
+							<p class="field-response-padding">{{eaForm.employer.cityStateZip}}</p>
+
+						</div>
+						<div>
+							<span><b>11.</b> Work Area Code/Telephone Number</span>
+							<p class="field-response-padding">{{eaForm.employer.workPhone}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="reference_info">
+			<b>REFERENCE INFORMATION</b>
+			<hr />
+			<p>List two persons with different U.S. addresses who do not live
+				with you and who have known you for at least three years. Do not
+				list the Direct PLUS Loan borrower or, for a parent borrower, the
+				dependent undergraduate student as a reference.</p>
+			<div>
+				<div class="reference_row">
+					<b>12. </b>
+					<p>First Name:</p>
+					<p class="ref__fn underline">{{eaForm.reference1.firstName}}</p>
+					&nbsp;
+					<p>Middle Initial:</p>
+					<p class="ref__mi underline">{{eaForm.reference1.middleInitial}}</p>
+					&nbsp;
+					<p>Last Name:</p>
+					<p class="ref__ln underline">{{eaForm.reference1.lastName}}</p>
+				</div>
+				<div class="reference_row">
+					<p>Permanent Address (Street, City, State, Zip Code)</p>
+				</div>
+				<div class="reference_row">
+					<p class="ref__addr underline">{{eaForm.reference1.addressLine1}},&nbsp;{{eaForm.reference1.addressLine2}}{{helper.isReference1Address2}}{{eaForm.reference1.city}},&nbsp;{{eaForm.reference1.state}},&nbsp;{{eaForm.reference1.zipCode}}</p>
+				</div>
+				<div class="reference_row">
+					<p>Email Address (optional):</p>
+					<p class="ref__email underline">{{eaForm.reference1.email}}</p>
+				</div>
+				<div class="reference_row">
+					<p>Area Code/Telephone Number:</p>
+					<p class="ref__phone underline">{{eaForm.reference1.phoneNumber}}</p>
+				</div>
+				<div class="reference_row">
+					<b>13. </b>
+					<p>First Name:</p>
+					<p class="ref__fn underline">{{eaForm.reference2.firstName}}</p>
+					&nbsp;
+					<p>Middle Initial:</p>
+					<p class="ref__mi underline">{{eaForm.reference2.middleInitial}}</p>
+					&nbsp;
+					<p>Last Name:</p>
+					<p class="ref__ln underline">{{eaForm.reference2.lastName}}</p>
+				</div>
+				<div class="reference_row">
+					<p>Permanent Address (Street, City, State, Zip Code)</p>
+				</div>
+				<div class="reference_row">
+					<p class="ref__addr underline">{{eaForm.reference2.addressLine1}},&nbsp;{{eaForm.reference2.addressLine2}}{{helper.isReference2Address2}}{{eaForm.reference2.city}},&nbsp;{{eaForm.reference2.state}},&nbsp;{{eaForm.reference2.zipCode}}</p>
+				</div>
+				<div class="reference_row">
+					<p>Email Address (optional):</p>
+					<p class="ref__email underline">{{eaForm.reference2.email}}</p>
+				</div>
+				<div class="reference_row">
+					<p>Area Code/Telephone Number:</p>
+					<p class="ref__phone underline">{{eaForm.reference1.phoneNumber}}</p>
+				</div>
+			</div>
+		</div>
+		<div id="borrower_info">
+			<b>BORROWER INFORMATION - TO BE COMPLETED BY THE U.S. DEPARTMENT
+				OF EDUCATION</b>
+			<hr />
+			<div class="flexbox-row">
+				<div class="form__section-brwr-info flex-1">
+					<div>
+						<span><b>14.</b> Borrower's Name</span>
+						<p class="field-response-padding">{{eaForm.borrower.name}}</p>
+
+					</div>
+					<div>
+						<span><b>15.</b> Borrower's Social Security Number</span>
+						<p class="field-response-padding">{{eaForm.borrower.ssn}}</p>
+
+					</div>
+					<div>
+						<span><b>16.</b> Borrower's Date of Birth</span>
+						<p class="field-response-padding">{{eaForm.borrower.dob}}</p>
+					</div>
+					<div class="large_bwr_field">
+						<span><b>17.</b> Borrower's Permanent Address</span>
+						<p class="field-response-padding">{{eaForm.borrower.addressLine1}}</p>
+						{{{helper.isBorrowerAddress2PTag}}}{{eaForm.borrower.addressLine2}}{{{helper.isBorrowerAddress2PTagEnd}}}
+						<p class="field-response-padding">{{eaForm.borrower.cityStateZip}}</p>
+
+					</div>
+					<div>
+						<span><b>18.</b> Loan Identification Number</span>
+						<p class="field-response-padding">{{eaForm.borrower.loanIdentificationNumber}}</p>
+
+					</div>
+				</div>
+				<div class="form__section-brwr-info flex-1">
+					<div>
+						<span><b>19.</b> Direct PLUS Loan Amount</span>
+						<p class="field-response-padding">{{eaForm.borrower.directPLUSLoanAmount}}</p>
+					</div>
+					<div>
+						<span><b>20.</b> Borrower's Home Area Code/Telephone Number</span>
+						<p class="field-response-padding">{{eaForm.borrower.phoneNumber}}</p>
+					</div>
+					<div>
+						<span><b>21.</b> Name and Address of School</span>
+						<p class="field-response-padding">{{eaForm.school.name}}</p>
+						<p class="field-response-padding">{{eaForm.school.address1}}</p>
+						<p class="field-response-padding">{{eaForm.school.cityStateZip}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--  End of Page 1 -->
+<div class="page-break"></div>
+<!--  Start of Page 2 -->
+<div id="page__2">
+	<div class="section__endorsers-info flexbox-row">
+		<p class="label">
+			Endorser's Name:</strong>
+		<p class="field__endorser-name underline">{{eaForm.endorser.name}}</p>
+		<p class="label__endorser-ssn label">
+			Social Security Number:</strong>
+		<p class="field__endorser-ssn underline">{{eaForm.endorser.ssn}}</p>
+	</div>
+	<div class="section__dependent-undergrad">
+		<p class=" section-label">DEPENDENT UNDERGRADUATE STUDENT
+			INFORMATION - TO BE COMPLETED BY THE U.S. DEPARTMENT OF EDUCATION</p>
+		<hr>
+		<div>
+			<!-- Start At 22 -->
+			<ol class="flexbox-row">
+				<li>Student's Name
+					<p class="field-response-padding">{{eaForm.student.name}}</p>
+				</li>
+				<li>Student's Social Security Number
+					<p class="field-response-padding">{{eaForm.student.ssn}}</p>
+				</li>
+			</ol>
+		</div>
+	</div>
+	<div class="section__endorser-ptp">
+		<p class="section-label">ENDORSER'S PROMISE TO PAY</p>
+		<hr>
+		<div>
+			<!-- Start At 24 -->
+			<ol class="endorser-ptp__list">
+				<li>Under penalty of perjury, I certify that <b>(1)</b> the
+					information contained in the Endorser Information section of this
+					Addendum is true and accurate, and <b>(2)</b> if the borrower is a
+					parent borrower, I am not the student on whose behalf the borrower
+					is receiving the Direct PLUS Loan.
+				</li>
+				<li>I understand that this is an Addendum to a Direct PLUS Loan
+					MPN. I will not sign the Addendum before reading the entire
+					Addendum and MPN, even if I am told not to read it, or told that I
+					am not required to read it.</li>
+				<li>I am entitled to an exact copy of the MPN, this Addendum,
+					and the Borrower's Rights and Responsibilities Statement. My
+					signature below certifies that I have read, understand, and agree
+					to this Addendum, the MPN, the Borrower's Rights and
+					Responsibilities Statement, and the terms and conditions of the
+					loan.</li>
+				<li>I authorize the U.S. Department of Education (ED) and its
+					agents and contractors to investigate my credit record and report
+					information about my loan status to persons and organizations
+					permitted by law to receive that information. I understand that if
+					the borrower becomes delinquent in making payments or defaults on
+					the loan made under the MPN, ED may report my name to consumer
+					reporting agencies in connection with the delinquent or defaulted
+					loan.</li>
+				<li>I authorize the schools, ED, and their agents and
+					contractors to contact me regarding the loan for which I am serving
+					as an endorser, including repayment of the loan, at any cellular
+					telephone number I provide now or in the future using automated
+					dialing equipment or artificial or prerecorded voice or text
+					messages.</li>
+				<li>I understand that the maximum loan amount that may be
+					disbursed to the borrower under this MPN is shown in Item 19 of
+					this Addendum. The actual amount disbursed to the borrower may be
+					less than the amount shown.</li>
+				<li>If the borrower identified in the Borrower Information
+					section does not repay the loan that is disbursed under the MPN, as
+					identified in Items 18 and 19 of this Addendum, I promise to repay
+					the full amount of the loan to ED, including unpaid principal,
+					accrued interest, and other charges and fees which may become due,
+					as provided in the MPN and this Addendum. If I do not make payments
+					on the loan made under the MPN and this Addendum when due, I will
+					also pay reasonable collection costs, including but not limited to
+					attorney's fees, court costs, and other fees. I understand that ED
+					may use the same collection efforts against me that may be used
+					against the borrower. These methods may include, but are not
+					limited to, suing me and garnishing my wages.</li>
+			</ol>
+		</div>
+	</div>
+	<div class="section__understand">
+		<b>I UNDERSTAND THAT THIS IS A FEDERAL LOAN THAT I MUST REPAY IF
+			THE BORROWER DOES NOT REPAY THE LOAN.</b>
+	</div>
+	<div class="section__endorser-sig">
+		<!--  Start At 31 -->
+		<!-- 	<ol>
+			<li><b>Endorser's Signature </b><span
+				class="section__endorser-sig-fields endorser-sig underline"><span style="padding-left:5px">{{eaForm.endorser.name}}</span></span></li>
+			<li><b>Today's Date </b><span
+				class="section__endorser-sig-fields todays-date underline"><span style="margin-left:5px">{{helper.todaysDate}}</span></span></li>
+		</ol> -->
+		<div class="reference_row">
+			<span><b>31. Endorser's Signature </b></span><span
+				class="section__endorser-sig-fields endorser-sig underline"><span
+				style="padding-left: 5px">{{eaForm.endorser.name}}</span></span>
+		</div>
+		<div class="reference_row">
+			<span><b>32. Today's Date </b></span><span
+				class="section__endorser-sig-fields endorser-sig underline"><span
+				style="padding-left: 5px">{{helper.todaysDate}}</span></span>
+		</div>
+	</div>
+	{{/eaForm}}
+</div>
+<!--  End of Page 2 -->
+<div class="page-break"></div>
+<!--  Start of Page 3 -->
+<div id="page__3">
+	<div class="section_mpn-tc">
+		<p class="page-header">MPN TERMS AND CONDITIONS</p>
+		<hr>
+	</div>
+	<div class="two-columns gap-medium column-fill-auto">
+		<p class="lh">This is an Addendum to the Federal Direct PLUS
+			(Direct PLUS) Loan Master Promissory Note (MPN) signed by the
+			borrower of the Direct PLUS Loan. The borrower of a Direct PLUS Loan
+			may be a graduate or professional student, or the parent of a
+			dependent undergraduate student. By signing this Addendum, you are
+			agreeing to repay only the loan that is identified in the Borrower
+			Information section of this Addendum, if the borrower does not repay
+			that loan. No additional loans may be made to the borrower under this
+			MPN.</p>
+		<p>This section of the Addendum contains the terms and conditions
+			of the MPN signed by the borrower. Important additional information
+			is also contained in the Borrower's Rights and Responsibilities
+			Statement that accompanies this Addendum. As an endorser, you are not
+			entitled to all of the same benefits as a Direct PLUS Loan borrower.
+			For complete information regarding your rights and responsibilities
+			as an endorser, please read the Borrower's Rights and
+			Responsibilities Statement.</p>
+		<p class="text__subheader">GOVERNING LAW</p>
+		<p>
+			The terms of this Master Promissory Note (MPN) will be interpreted in
+			accordance with the HEA (20 U.S.C. 1070 <i>et seq</i>.), ED's
+			regulations, any amendments to the HEA and the regulations in
+			accordance with the effective date of those amendments, and other
+			applicable federal laws and regulations. Throughout this MPN, we
+			refer to these laws and regulations collectively as the "Act".
+		</p>
+		<p>Under applicable state law, except as preempted by federal law,
+			you may have certain borrower rights, remedies, and defenses in
+			addition to those stated in this MPN and the Borrower's Rights and
+			Responsibilities Statement.</p>
+
+		<p class="text__subheader">DISCLOSURE OF LOAN TERMS</p>
+		<p>This MPN applies to Direct PLUS Loans. Under this MPN, the
+			principal amount that you owe, and are required to repay, will be the
+			sum of all disbursements that are made (unless you reduce or cancel
+			any disbursements as explained below under Loan Cancellation), plus
+			any unpaid interest that is capitalized and added to the principal
+			balance.</p>
+		<p>At or before the time of the first disbursement of each loan,
+			you will receive a disclosure statement identifying the amount of the
+			loan and additional terms of the loan. The Borrower's Rights and
+			Responsibilities Statement accompanying this MPN contains important
+			additional information. The Borrower's Rights and Responsibilities
+			Statement and any disclosure statement you receive in connection with
+			any loan under this MPN are hereby incorporated into this MPN.</p>
+		<p>You may request additional loan funds to pay for your or the
+			student's educational costs by contacting the school's financial aid
+			office. The school will determine if you are eligible for any
+			additional loan funds. You will be notified of any increase or other
+			change in the amount of your loan.</p>
+		<p>Each loan made under this MPN is separately enforceable based
+			on a true and exact copy of this MPN.</p>
+		<p>We may use a servicer to handle billing and other
+			communications related to your loan.</p>
+
+		<p class="text__subheader">LOAN CANCELLATION</p>
+		<p>You may pay back all or part of a loan disbursement within the
+			timeframes set by the Act, as explained in the Borrower's Rights and
+			Responsibilities Statement and in a disclosure statement that you
+			will receive. If you return the full loan amount within those
+			timeframes, you will not have to pay any loan fee or interest
+			charges. If you return part of a disbursement within those
+			timeframes, ED will reduce the loan fee and interest charges in
+			proportion to the amount returned.</p>
+
+		<p class="text__subheader">INTEREST</p>
+		<p>Unless we notify you in writing that a different rate will
+			apply, the interest rate for any loan you receive under this MPN is a
+			fixed rate that is calculated in accordance with a formula specified
+			in the Act. The interest rate for Direct PLUS Loans is calculated
+			each year. When the rate is calculated, it applies to Direct PLUS
+			Loans for which the first disbursement is made during the period
+			beginning on July 1 of one year and ending on June 30 of the
+			following year. Different interest rates may apply to different loans
+			you receive under this MPN, depending on when the loan is first
+			disbursed. The maximum interest rate for Direct PLUS Loans is 10.5%.
+			We will notify you of the interest rate on each of your loans.</p>
+		<p>If you are in the military and the interest rate on your loan
+			is greater than 6%, you may qualify to have the rate limited to 6%
+			during your period of service. In addition, under the no accrual of
+			interest benefit for active duty service members, you are not
+			required to pay the interest that accrues on any type of Direct Loan
+			Program loan first disbursed on or after October 1, 2008 during
+			periods of qualifying active duty military service (for up to 60
+			months).</p>
+
+		<p>Interest accrues on the unpaid principal balance of each loan
+			from the date of disbursement until the loan is paid in full,
+			including during deferment, forbearance, or other periods. Except
+			during certain periods of repayment under the Revised Pay As You Earn
+			Repayment Plan (REPAYE Plan), you agree to pay all interest charges
+			on your loan. (The REPAYE Plan is not available to parent borrowers.)
+			You will be given the opportunity to pay the interest that accrues
+			during a period of authorized deferment or forbearance. If you do not
+			pay this interest, we may capitalize the interest (add it to the
+			principal balance of your loans) at the end of the deferment or
+			forbearance.</p>
+
+		<p class="text__subheader">LOAN FEE</p>
+		<p>As provided by the Act, we charge a loan fee for each Direct
+			PLUS Loan you receive under this MPN. The loan fee is a percentage of
+			the loan amount and will be deducted proportionately from each
+			disbursement of each of your loans. The specific loan fee that you
+			are charged will be shown on disclosure statements that will be sent
+			to you. We may refund the loan fee only as permitted by the Act.</p>
+
+		<p class="text__subheader">LATE CHARGES AND COLLECTION COSTS</p>
+		<p>We may collect from you:</p>
+		<ul>
+			<li><p>A late charge of not more than six cents for each
+					dollar of each late payment if you do not make any part of a
+					required installment payment within 30 days after it becomes due,
+					and</p></li>
+			<li><p>Any other charges and fees that are permitted by the
+					Act related to the collection of your loans.</p></li>
+		</ul>
+		<p>If you default on your loans, you must pay reasonable
+			collection costs, plus court costs and attorney fees.</p>
+
+		<p class="text__subheader">REPAYMENT</p>
+		<p>You must repay the full amount of the loans made under this
+			MPN, plus accrued interest. You will repay each loan in monthly
+			installments during a repayment period that begins on the day of the
+			final disbursement of that loan. Generally, payments that you make or
+			that someone else makes on your behalf will be applied first to late
+			charges and collection costs that are due, then to interest that has
+			not been paid, and finally to the principal amount of the loan.
+			However, any payments made under the REPAYE Plan, the Pay As You Earn
+			Repayment Plan (PAYE Plan), and the Income-Based Repayment Plan (IBR
+			Plan) will be applied first to interest that is due, then to fees
+			that are due, and then to the principal amount. The REPAYE, PAYE, and
+			IBR plans are not available to parent borrowers.</p>
+		<p>You have a choice of repayment plans. The Borrower's Rights and
+			Responsibilities Statement includes information on these repayment
+			plans. You must select a repayment plan. If you do not select a
+			repayment plan, we will choose a plan for you in accordance with the
+			Act.</p>
+		<p>Once you choose a repayment plan, we will provide you with a
+			repayment schedule that identifies your payment amounts and due
+			dates. If you intend to repay your loan but are unable to make your
+			scheduled loan payments, we may grant you a forbearance that allows
+			you to temporarily stop making payments or to temporarily make a
+			smaller payment amount, which extends the time for making payments.</p>
+	</div>
+</div>
+<!--  End of Page 3 -->
+<div class="page-break"></div>
+<!--  Start of Page 4 -->
+<div id="page__4">
+
+	<div class="section_mpn-tc">
+		<p class="page-header">MPN TERMS AND CONDITIONS (CONTINUED)</p>
+		<hr>
+	</div>
+	<div class="two-columns column-fill-bal">
+		<p>We may adjust payment dates on your loans or may grant you a
+			forbearance to eliminate a delinquency that remains even though you
+			are making scheduled installment payments.</p>
+		<p>You may prepay all or any part of the unpaid balance on your
+			loans at any time without penalty. We will determine how to apply the
+			prepayment in accordance with the Act.</p>
+		<p>After you have repaid in full a loan made under this MPN, we
+			will send you a notice telling you that you have paid off your loan.</p>
+		<p class="text__subheader">ACCELERATION AND DEFAULT</p>
+		<p>At our option, the entire unpaid balance of a loan made under
+			this MPN will become immediately due and payable (this is called
+			"acceleration") if any one of the following events occurs:</p>
+		<p>
+			<b>(1)</b> You (or the student) do not begin attendance in any
+			classes at the school that determined you were eligible to receive
+			the loan;
+		</p>
+		<p>
+			<b>(2)</b> You do not use the loan money solely for your or the
+			student's educational expenses;
+		</p>
+		<p>
+			<b>(3)</b> You make a false representation that results in your
+			receiving a loan for which you are not eligible; or
+		</p>
+		<p>
+			<b>(4)</b> You default on the loan.
+		</p>
+		<p>You will be considered in default on your loan if:</p>
+		<p>
+			<b>(1)</b> The full unpaid balance of the loan becomes immediately
+			due and payable because event (1), (2), or (3) above occurs, and you
+			do not pay the amount due;
+		</p>
+		<p>
+			<b>(2)</b> You do not make installment payments when due, and your
+			failure to make payments has continued for at least 270 days; or
+		</p>
+		<p>
+			<b>(3)</b> You do not comply with other terms of the loan, and we
+			reasonably conclude that you no longer intend to honor your repayment
+			obligation.
+		</p>
+		<p>If you default, we may capitalize all outstanding interest.
+			This will increase the principal balance of your loan, and the full
+			amount of the loan, including the new principal balance and
+			collection costs, will become immediately due and payable.</p>
+		<p>If you default, the default will be reported to nationwide
+			consumer reporting agencies (credit bureaus) and will significantly
+			and adversely affect your credit history. A default will have
+			additional adverse consequences as explained in the Borrower's Rights
+			and Responsibilities Statement. Following default, you may be
+			required to repay the loan (potentially including amounts in excess
+			of the principal and interest) under the IBR Plan, the PAYE Plan, the
+			REPAYE Plan, or the Income-Contingent Repayment Plan (ICR Plan) in
+			accordance with the Act.</p>
+
+		<p class="text__subheader">LEGAL NOTICES</p>
+		<p>Any notice required to be given to you will be effective if it
+			is sent by first class mail to the most recent address that we have
+			for you, by electronic means to an email address you have provided,
+			or by any other method of notification that is permitted or required
+			by applicable law and regulation. You must immediately notify us of a
+			change in your contact information or status as specified in the
+			Borrower's Rights and Responsibilities Statement under "Information
+			you must report to us after you receive your loan."</p>
+		<p>If we do not enforce or insist on compliance with any term of
+			this MPN, it does not waive any of our rights. No provision of this
+			MPN may be modified or waived, unless we do so in writing. If any
+			provision of this MPN is determined to be unenforceable, the
+			remaining provisions will remain in force.</p>
+		<p>Information about your loans will be submitted to the National
+			Student Loan Data System (NSLDS). Information in NSLDS is accessible
+			to schools, lenders, and guarantors for specific purposes that we
+			authorize.</p>
+
+		<p class="text__subheader">NOTICE ABOUT SUBSEQUENT LOANS MADE
+			UNDER THIS MPN</p>
+		<p>This MPN authorizes us to make multiple loans to you to pay
+			your educational expenses or, if you are a parent borrower, the
+			educational expenses of the student identified in the Dependent
+			Undergraduate Student Information section during the multi-year term
+			of this MPN, upon your request and upon the school's annual
+			certification of your loan eligibility. If you have an adverse credit
+			history and obtain an endorser to receive a Direct PLUS Loan, only
+			one loan may be made under this MPN.</p>
+		<p>At schools that are authorized to use the multi-year feature of
+			the MPN and choose to do so, subsequent loans may be made under this
+			MPN for subsequent academic years. At any school, subsequent loans
+			may be made under this MPN for the same academic year.</p>
+		<p>No subsequent loans will be made under this MPN after the
+			earliest of the following dates:</p>
+		<p>
+			<b>(1)</b> The date we or the school receive your written notice that
+			no further loans may be made;
+		</p>
+		<p>
+			<b>(2)</b> One year after the date you sign the MPN or the date we
+			receive the MPN if no disbursements are made under the MPN; or
+		</p>
+		<p>
+			<b>(3)</b> Ten years after the date you sign the MPN or the date we
+			receive the MPN.
+		</p>
+	</div>
+	<div class="section_mpn-tc">
+		<p class=" section-label">IMPORTANT NOTICES</p>
+		<hr>
+	</div>
+	<div class="two-columns column-fill-bal">
+
+		<p class="text__subheader">GRAMM-LEACH-BLILEY ACT NOTICE</p>
+		<p>In 1999, Congress enacted the Gramm-Leach-Bliley Act (Public
+			Law 106-102). This Act requires that lenders provide certain
+			information to their customers regarding the collection and use of
+			nonpublic personal information.</p>
+		<p>We disclose nonpublic personal information to third parties
+			only as necessary to process and service your loan and as permitted
+			by the Privacy Act of 1974. See the Privacy Act Notice below. We do
+			not sell or otherwise make available any information about you to any
+			third parties for marketing purposes.</p>
+		<p>We protect the security and confidentiality of nonpublic
+			personal information by implementing the following policies and
+			practices. All physical access to the sites where nonpublic personal
+			information is maintained is controlled and monitored by security
+			personnel. Our computer systems offer a high degree of resistance to
+			tampering and circumvention. These systems limit data access to our
+			staff and contract staff on a "need-to-know" basis, and control
+			individual users' ability to access and alter records within the
+			systems. All users of these systems are given a unique user ID with
+			personal identifiers. All interactions by individual users with the
+			systems are recorded.</p>
+		<div class="break-column">
+			<p class="text__subheader">PRIVACY ACT NOTICE</p>
+
+			<p>The Privacy Act of 1974 (5 U.S.C. 552a) requires that the
+				following notice be provided to you:</p>
+
+			<p>
+				The authority for collecting the requested information from and
+				about you is &sect;451 <i>et seq.</i> of the Higher Education Act
+				(HEA) of 1965, as amended (20 U.S.C. 1087a <i>et seq.</i>) and the
+				authorities for collecting and using your Social Security Number
+				(SSN) are &sect;&sect;428B(f) and 484(a)(4) of the HEA (20 U.S.C.
+				1078-2(f) and 1091(a)(4)) and 31 U.S.C. 7701(b). Participating in
+				the William D. Ford Federal Direct Loan (Direct Loan) Program and
+				giving us your SSN are voluntary, but you must provide the requested
+				information, including your SSN, to participate.
+			</p>
+		</div>
+	</div>
+</div>
+
+<!--  End of Page 4 -->
+<div class="page-break"></div>
+<!--  Start of Page 5 -->
+<div id="page__5">
+	<div class="section_mpn-tc">
+		<p class="page-header">IMPORTANT NOTICES (continued)</p>
+		<hr>
+	</div>
+	<div class="two-columns column-fill-auto">
+		<p>The principal purposes for collecting the information on this
+			form, including your SSN, are to verify your identity, to determine
+			your eligibility to receive a loan or a benefit on a loan (such as a
+			deferment, forbearance, discharge, or forgiveness) under the Direct
+			Loan Program, to permit the servicing of your loan(s), and, if it
+			becomes necessary, to locate you and to collect and report on your
+			loan(s) if your loan(s) become delinquent or in default. We also use
+			your SSN as an account identifier and to permit you to access your
+			account information electronically.</p>
+
+		<p>The information in your file may be disclosed, on a case by
+			case basis or under a computer matching program, to third parties as
+			authorized under routine uses in the appropriate systems of records
+			notices. The routine uses of this information include, but are not
+			limited to, its disclosure to federal, state, or local agencies, to
+			private parties such as relatives, present and former employers,
+			business and personal associates, to consumer reporting agencies, to
+			financial and educational institutions, and to guaranty agencies in
+			order to verify your identity, to determine your eligibility to
+			receive a loan or a benefit on a loan, to permit the servicing or
+			collection of your loan(s), to enforce the terms of the loan(s), to
+			investigate possible fraud and to verify compliance with federal
+			student financial aid program regulations, or to locate you if you
+			become delinquent in your loan payments or if you default. To provide
+			default rate calculations, disclosures may be made to guaranty
+			agencies, to financial and educational institutions, or to state
+			agencies. To provide financial aid history information, disclosures
+			may be made to educational institutions. To assist program
+			administrators with tracking refunds and cancellations, disclosures
+			may be made to guaranty agencies, to financial and educational
+			institutions, or to federal or state agencies. To provide a
+			standardized method for educational institutions to efficiently
+			submit student enrollment status, disclosures may be made to guaranty
+			agencies or to financial and educational institutions. To counsel you
+			in repayment efforts, disclosures may be made to guaranty agencies,
+			to financial and educational institutions, or to federal, state, or
+			local agencies.</p>
+		<p>In the event of litigation, we may send records to the
+			Department of Justice, a court, adjudicative body, counsel, party, or
+			witness if the disclosure is relevant and necessary to the
+			litigation. If this information, either alone or with other
+			information, indicates a potential violation of law, we may send it
+			to the appropriate authority for action. We may send information to
+			members of Congress if you ask them to help you with federal student
+			aid questions. In circumstances involving employment complaints,
+			grievances, or disciplinary actions, we may disclose relevant records
+			to adjudicate or investigate the issues. If provided for by a
+			collective bargaining agreement, we may disclose records to a labor
+			organization recognized under 5 U.S.C. Chapter 71. Disclosures may be
+			made to our contractors for the purpose of performing any
+			programmatic function that requires disclosure of records. Before
+			making any such disclosure, we will require the contractor to
+			maintain Privacy Act safeguards. Disclosures may also be made to
+			qualified researchers under Privacy Act safeguards.</p>
+
+		<p class="text__subheader">FINANCIAL PRIVACY ACT NOTICE</p>
+		<p>Under the Right to Financial Privacy Act of 1978 (12 U.S.C.
+			3401-3421), ED will have access to financial records in your student
+			loan file maintained in compliance with the administration of the
+			Direct Loan Program.</p>
+		<div class="break-column">
+			<p class="text__subheader">PAPERWORK REDUCTION NOTICE</p>
+			<p>According to the Paperwork Reduction Act of 1995, no persons
+				are required to respond to a collection of information unless such
+				collection displays a valid OMB control number. The valid OMB
+				control number for this information collection is 1845-0068. Public
+				reporting burden for this collection of information is estimated to
+				average 30 minutes (0.5 hours) per response, including time for
+				reviewing instructions, searching existing data sources, gathering
+				and maintaining the data needed, and completing and reviewing the
+				collection of information. The obligation to respond to this
+				collection is required to obtain a benefit in accordance with 34 CFR
+				685.201. If you have comments or concerns regarding the status of
+				your individual submission of this form, write to:</p>
+			<p>
+				U.S. Department of Education<br /> Common Origination and
+				Disbursement School Relations Center<br /> Attn: Student Loan
+				Support<br /> PO Box 9002<br /> Niagara Falls, NY 14302
+			</p>
+		</div>
+	</div>
+</div>
+<!--  End of Page 5 -->
+<div class="page-break"></div>
+<!--  Start of Page 6 -->
+<div id="page__6">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns gap-medium">
+
+		<p class="text__subheader">IMPORTANT NOTICE</p>
+
+		<p>This Borrower's Rights and Responsibilities Statement provides
+			additional information about the terms and conditions of the loans
+			you receive under the accompanying Master Promissory Note (MPN) for
+			Direct PLUS Loans. Please keep this Borrower's Rights and
+			Responsibilities Statement for your records. You may request another
+			copy of this Borrower's Rights and Responsibilities Statement at any
+			time by contacting your servicer.</p>
+		<p>Throughout this Borrower's Rights and Responsibilities
+			Statement, the words "we," "us," and "our" refer to the U.S.
+			Department of Education. The word "loan" refers to one or more loans
+			made under the accompanying MPN.</p>
+
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b><br> An endorser is someone who agrees to
+			repay a Direct PLUS Loan if the borrower does not repay the loan. If
+			you are the endorser of a Direct PLUS Loan, you are not entitled to
+			all of the same benefits as a Direct PLUS Loan borrower, and not all
+			of the terms and conditions of a Direct PLUS Loan apply to you.
+			However, you should read the entire Borrower's Rights and
+			Responsibilities Statement. We have highlighted important information
+			that applies to you as an endorser.
+		</p>
+
+
+		<p class="text__subheader">
+			1. THE WILLIAM D. FORD FEDERAL DIRECT LOAN PROGRAM</b>
+		<p>The William D. Ford Federal Direct Loan (Direct Loan) Program
+			includes the following types of loans, known collectively as "Direct
+			Loans":</p>
+		<ul>
+			<li>Federal Direct Stafford/Ford Loans (Direct Subsidized Loans)</li>
+			<li>Federal Direct Unsubsidized Stafford/Ford Loans (Direct
+				Unsubsidized Loans)</li>
+			<li>Federal Direct PLUS Loans (Direct PLUS Loans)</li>
+			<li>Federal Direct Consolidation Loans (Direct Consolidation
+				Loans)</li>
+		</ul>
+
+		<p>
+			The Direct Loan Program is authorized by Title IV, Part D, of the
+			Higher Education Act of 1965, as amended (HEA), 20 U.S.C. 1070 <i>et
+				seq</i>.
+		</p>
+		<p>Direct Loans are made by the U.S. Department of Education. We
+			contract with servicers to service, answer questions about, and
+			process payments on Direct Loans. Your servicer will provide you with
+			its address and telephone number after the school notifies us that
+			the first disbursement of your loan has been made. It is important to
+			keep in contact with your servicer.</p>
+
+
+		<p class="text__subheader">2. LAWS THAT APPLY TO THIS MPN</p>
+		<p>The terms and conditions of loans made under this MPN are
+			determined by the HEA and other applicable federal laws and
+			regulations. These laws and regulations are referred to as "the Act"
+			throughout this Borrower's Rights and Responsibilities Statement.
+			Under applicable state law, except as preempted by federal law, you
+			may have certain borrower rights, remedies, and defenses in addition
+			to those stated in the MPN and this Borrower's Rights and
+			Responsibilities Statement.</p>
+		<p>
+			<b>NOTE: Any amendment to the Act that affects the terms of this
+				MPN will be applied to your loans in accordance with the effective
+				date of the amendment.</b>
+		</p>
+
+		<p class="text__subheader">3. DIRECT PLUS LOANS</p>
+		<p>Direct PLUS Loans are loans made to graduate or professional
+			students or to parents of dependent undergraduate students to help
+			pay for the cost of education beyond high school ("dependent" is
+			defined in the Act and is different from the definition used by the
+			Internal Revenue Service). To be eligible for a Direct PLUS Loan:</p>
+		<ul>
+			<li><p>You must be a graduate or professional student or the
+					biological or adoptive parent of the dependent undergraduate
+					student for whom</p>
+				<p class="break-column">you are borrowing. If you are the spouse
+					of the dependent undergraduate student's parent (that is, if you
+					are the student's stepparent), you may borrow a Direct PLUS Loan if
+					you are considered to be a parent in accordance with the
+					instructions on the Free Application for Federal Student Aid
+					(FAFSA) for purposes of reporting your income and assets on the
+					FAFSA.</p></li>
+			<li>You, and if you are a parent borrower, your child, must be a
+				U.S. citizen or national, a permanent resident of the United States,
+				or an otherwise eligible non-citizen.</li>
+			<li>You, and if you are a parent borrower, your child, must not
+				be in default on a federal education loan or owe an overpayment on a
+				federal education grant, and must not have been convicted of, or
+				have pled <i>nolo contendere</i> (no contest) or guilty to, a crime
+				involving fraud in obtaining funds under the Act.
+			</li>
+			<li>You must not have an adverse credit history (unless you meet
+				certain other requirements - see below).</li>
+			<li>You, or if you are a parent borrower, your child, must be
+				enrolled at least half-time at a school that participates in the
+				Direct Loan Program.</li>
+		</ul>
+
+		<p>We will check your credit history each time you request a
+			Direct PLUS Loan. If you have an adverse credit history, you may not
+			borrow a Direct PLUS Loan unless you:</p>
+		<p>(1) Obtain an endorser who does not have an adverse credit
+			history, or document to our satisfaction that there are extenuating
+			circumstances related to the adverse credit history, and</p>
+		<p>(2) Complete Direct PLUS Loan credit counseling that we
+			provide.</p>
+
+		<p>An endorser is someone who agrees to repay the Direct PLUS Loan
+			if you do not do so. If you are a parent borrower, the endorser of a
+			Direct PLUS Loan may not be the student for whom you are borrowing
+			the loan.</p>
+		<p>If you are a graduate or professional student, you must
+			complete a Free Application for Federal Student Aid (FAFSA) and your
+			school must determine your eligibility for the maximum annual Direct
+			Unsubsidized Loan amount before you apply for a Direct PLUS Loan.</p>
+		<p>If you have questions about your eligibility for a Direct PLUS
+			Loan, contact the financial aid office at the school you attend or
+			are planning to attend or, if you are a parent borrower, the school
+			the student attends or is planning to attend.</p>
+
+		<p class="text__subheader">4. ABOUT THE MPN</p>
+		<p>You may receive more than one loan under this MPN over a period
+			of up to 10 years to pay for your educational costs (if you are a
+			graduate or professional student borrower) or for the educational
+			costs of the student identified in the Dependent Undergraduate
+			Student Information section of the MPN (if you are a parent
+			borrower), as long as the school is authorized to use the multi-year
+			feature of the MPN and chooses to do so.</p>
+		<p>If the school is not authorized to use the multi-year feature
+			of the MPN or chooses not to do so, or if you do not want to receive
+			more than one loan under this MPN, you must sign a new MPN for each
+			loan that you receive. If you do not want to receive more than one
+			loan under this MPN, you must notify the school or your servicer in
+			writing.</p>
+		<p>If you are a parent requesting more than one Direct PLUS Loan
+			to pay for the educational costs of more than one dependent
+			undergraduate student, you must sign a separate MPN for each student.
+			You must also sign separate MPNs if you are a parent borrowing on
+			behalf of a dependent undergraduate student and you also wish to
+			obtain a Direct PLUS Loan to pay for your own attendance in a
+			graduate or professional degree program.</p>
+	</div>
+</div>
+
+<!--  End of Page 6 -->
+<div class="page-break"></div>
+<!--  Start of Page 7 -->
+<div id="page__7">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<p>If we determine that you have an adverse credit history and you
+			obtain an endorser (see Item 3, "Direct PLUS Loans"), you may receive
+			only one loan under this MPN. If you later want to receive another
+			Direct PLUS Loan, you must sign a new MPN. If you receive a loan
+			under this MPN without an endorser, but are later determined to have
+			an adverse credit history and obtain an endorser for a future Direct
+			PLUS Loan, you will have to sign a new MPN for that loan.</p>
+
+
+		<p class="text__subheader">5. DIRECT PLUS LOANS AND ELIGIBILITY
+			FOR OTHER FINANCIAL AID</p>
+
+		<p>If you borrow a Direct PLUS Loan, this may affect your
+			eligibility for other financial aid. Therefore, we suggest that you
+			contact the school's financial aid office to determine your
+			eligibility for grants, work-study funds, or other forms of federal,
+			state and private student aid that do not have to be repaid before
+			you apply for a Direct PLUS Loan.</p>
+
+
+		<p class="text__subheader">6. USE OF YOUR LOAN MONEY</p>
+
+		<p>You may use the loan money you receive only to pay for your
+			authorized educational expenses or, if you are a parent borrower, for
+			the student's authorized educational expenses for attendance at the
+			school that determined you were eligible to receive the loan.
+			Authorized expenses include the following:</p>
+		<ul>
+			<li>Tuition</li>
+			<li>Room</li>
+			<li>Board</li>
+			<li>Institutional fees</li>
+			<li>Books</li>
+			<li>Supplies</li>
+			<li>Equipment</li>
+			<li>Dependent care expenses</li>
+			<li>Transportation</li>
+			<li>Commuting expenses</li>
+			<li>Rental or purchase of a personal computer</li>
+			<li>Loan fees</li>
+			<li>Other documented, authorized costs</li>
+		</ul>
+
+
+		<p class="text__subheader">7. INFORMATION YOU MUST REPORT TO US
+			AFTER YOU RECEIVE YOUR LOAN</p>
+
+		<p>You must notify your servicer and/or the financial aid office
+			at the school about certain changes.</p>
+		<p>Until you (or if you are a parent borrower, the student)
+			graduate or otherwise leave school, you must notify the school's
+			financial aid office if:</p>
+		<ul>
+			<li>You change your address or telephone number;</li>
+			<li>You change your name (for example, maiden name to married
+				name); or</li>
+			<li>You (or if you are a parent borrower, the student) -
+				<ul>
+					<li>Do not enroll at least half-time for the loan period
+						certified by the school;</li>
+					<li>Do not enroll at the school that determined you were
+						eligible to receive the loan;</li>
+					<li>Stop attending school or drop below half-time enrollment;</li>
+					<li>Transfer from one school to another school; or</li>
+					<li>Graduate.</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p>You must also notify your servicer if any of the above events
+			occur at any time after you receive your loan. In addition, you must
+			notify your servicer if you:</p>
+
+		<ul>
+			<li>Change your employer, or your employer's address or
+				telephone number changes; or</li>
+			<li>Have any other change in status that would affect your loan
+				(for example, if you receive a deferment while you are unemployed,
+				but you find a job and therefore no longer meet the eligibility
+				requirements for the deferment).</li>
+		</ul>
+
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b><br>You must notify the servicer if you
+			change your address, telephone number, name, or employer, or if your
+			employer's address or telephone number changes.
+		</p>
+
+
+		<p class="text__subheader">8. AMOUNT YOU MAY BORROW</p>
+
+		<p>For each academic year, you may borrow up to - but not more
+			than - the amount of your estimated cost of attendance (if you are a
+			graduate or professional student borrower) or the student's estimated
+			cost of attendance (if you are a parent borrower), minus the amount
+			of any other financial aid received for that academic year. The
+			school determines the cost of attendance using federal guidelines. It
+			is important not to borrow more than you can afford to repay, even if
+			you are eligible to borrow more.</p>
+
+
+		<p class="text__subheader">9. INTEREST RATE</p>
+
+		<p>The interest rate on a Direct PLUS Loan is a fixed rate that is
+			calculated in accordance with a formula specified in the Act. The
+			interest rate is calculated each year. When the rate is calculated,
+			it applies to all Direct PLUS Loans for which the first disbursement
+			is made during the period beginning on July 1 of one year and ending
+			on June 30 of the following year. Different fixed interest rates may
+			apply to separate loans made under this MPN depending on when the
+			loan is first disbursed. The maximum interest rate for Direct PLUS
+			Loans is 10.5%. We will notify you of the interest rate for each loan
+			you receive in a disclosure statement that we send to you.</p>
+
+		<p>
+			<b>Servicemembers Civil Relief Act</b>
+		</p>
+		<p>
+			<b>If you are in military service, you may qualify for a lower
+				interest rate on your loans.</b>
+		</p>
+
+		<p>Under the Servicemembers Civil Relief Act, the interest rate on
+			loans you received before you began your military service may be
+			limited to 6% during your military service. In most cases, your
+			servicer will determine if you are eligible for this benefit based on
+			information from the U.S. Department of Defense, and, if any of your
+			qualifying loans have an interest rate greater than 6%, will
+			automatically reduce that rate to 6% during your military service. If
+			you think you qualify for the 6% interest rate but have not received
+			it, contact your servicer. Your servicer can also provide more
+			information about this benefit.</p>
+		<p>If you have an adverse credit history and receive a Direct PLUS
+			Loan by obtaining an endorser, you will also qualify for the 6%
+			interest rate limit on that Direct PLUS Loan if the endorser
+			qualifies for the limit based on the endorser's military service (see
+			the Note to Endorser below).</p>
+
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b><br>You may be eligible for the reduced
+			interest rate described above based on the borrower's military
+			service or your own military service if you are the endorser for a
+			Direct PLUS Loan for which you signed an Endorser Addendum prior to
+			the earlier of the beginning date of the borrower's military service
+			or the beginning date of your military service.
+		</p>
+
+
+
+		<p class="text__subheader">10. PAYMENT OF INTEREST</p>
+		<p>Except as provided below for borrowers who serve in the
+			military, and (for Direct PLUS Loans made to graduate or professional
+			degree students) during certain periods of repayment under the REPAYE
+			Plan, you are responsible for paying the interest that accrues on
+			each Direct PLUS Loan you receive from the date the loan is first
+			disbursed until it is repaid in full, including during periods of
+			deferment or forbearance.</p>
+	</div>
+
+</div>
+
+<!--  End of Page 7 -->
+<div class="page-break"></div>
+<!--  Start of Page 8 -->
+<div id="page__8">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<p>
+			<b>No accrual of interest benefit for active duty service members</b>
+		</p>
+
+		<p>Under the no accrual of interest benefit for active duty
+			service members, you are not required to pay the interest that
+			accrues on any type of Direct Loan Program loan first disbursed on or
+			after October 1, 2008 during periods of qualifying active duty
+			military service (for up to 60 months).</p>
+
+		<p>
+			<b>Interest capitalization</b>
+		</p>
+
+		<p>If you do not pay the interest as it accrues on a Direct PLUS
+			Loan, as described above, we will add the accrued interest to the
+			unpaid principal balance of your loan. This is called
+			"capitalization." Capitalization increases the unpaid principal
+			balance of your loan, and interest then accrues on the increased
+			principal balance. We capitalize unpaid interest when you resume
+			repayment after periods of deferment or forbearance. We may also
+			capitalize unpaid interest that has accrued since the first
+			disbursement of your loan when you enter repayment for the first
+			time.</p>
+
+		<p>The chart that follows shows the difference in the total amount
+			you would repay on a $15,000 Direct PLUS Loan if you pay the interest
+			as it is charged during a 12-month deferment or forbearance period,
+			compared to the amount you would repay if you do not pay the interest
+			and it is capitalized.</p>
+		<div class=table-space></div>
+		<table class="page__8-table" summary="Payment of Interest">
+
+			<tr>
+				<th class="column-1"></th>
+				<th class="column-2">If you pay the interest as it accrues...</th>
+				<th class="column-3">If you do not pay the interest and it is
+					capitalized...</th>
+			</tr>
+			<tr>
+				<td class="column-1">Loan Amount</td>
+				<td class="column-2">$15,000</td>
+				<td class="column-3">$15,000</td>
+			</tr>
+			<tr>
+				<td class="column-1">Interest for 12 Months</td>
+				<td class="column-2">$1,575<br>(paid as accrued)
+				</td>
+				<td class="column-3">$1,575<br>(unpaid and capitalized)
+				</td>
+			</tr>
+			<tr>
+				<td class="column-1">Principal to be Repaid</td>
+				<td class="column-2">$15,000</td>
+				<td class="column-3">$16,575</td>
+			</tr>
+			<tr>
+				<td class="column-1">Monthly Payment</td>
+				<td class="column-2">$202</td>
+				<td class="column-3">$224</td>
+			</tr>
+			<tr>
+				<td class="column-1">Number of Payments</td>
+				<td class="column-2">120</td>
+				<td class="column-3">120</td>
+			</tr>
+			<tr>
+				<td class="column-1">Total Repaid</td>
+				<td class="column-2">$25,863</td>
+				<td class="column-3">$26,839</td>
+			</tr>
+		</table>
+		<p>The example in the chart above shows payments made under the
+			Standard Repayment Plan at an interest rate of 10.5%, the maximum
+			interest rate for a Direct PLUS Loan. In this example, you would pay
+			$22 less per month and $975 less altogether if you pay the interest
+			as it is charged during a 12-month deferment or forbearance period.</p>
+
+
+
+		<b>Federal income tax deduction</b>
+
+
+		<p>
+			You may be able to claim a federal income tax deduction for interest
+			payments you make on Direct Loans. For further information, refer to
+			IRS Publication 970, which is available at <a
+				href="http://www.irs.ustreas.gov/" target="_blank">http://www.irs.ustreas.gov</a>.
+		</p>
+
+
+		<p class="text__subheader">11. LOAN FEE</p>
+
+		<p>For each Direct PLUS Loan you receive under this MPN, we charge
+			a loan fee that is a percentage of the principal amount of each loan.
+			This fee will be subtracted proportionally from each disbursement of
+			your loan and will be shown on a disclosure statement that we send to
+			you.</p>
+
+
+		<p class="text__subheader">12. INTEREST RATE REDUCTION FOR
+			AUTOMATIC WITHDRAWAL OF PAYMENTS</p>
+
+		<p>Under the automatic withdrawal option, your bank automatically
+			deducts your monthly loan payment from your checking or savings
+			account and sends it to us. Automatic withdrawal helps to ensure that
+			your payments are made on time. In addition, you receive a 0.25%
+			interest rate reduction while you repay under the automatic
+			withdrawal option. Your servicer will provide you with information
+			about the automatic withdrawal option. You can also get the
+			information on your servicer's web site, or by calling your servicer.
+			Your servicer's web site address and toll-free telephone number are
+			provided on all correspondence that your servicer sends you.</p>
+
+
+		<p class="text__subheader">13. DISBURSEMENT (HOW YOUR LOAN MONEY
+			WILL BE PAID OUT)</p>
+
+		<p>Generally, the school will disburse (pay out) your loan money
+			in more than one installment, usually at the beginning of each
+			academic term (for example, at the beginning of each semester or
+			quarter). If the school does not use academic terms or does not have
+			academic terms that meet certain requirements, it will generally
+			disburse your loan in at least two installments, one at the beginning
+			of the period of study for which you are receiving the loan, and one
+			at the midpoint of that period of study. The school determines the
+			schedule for disbursing your loan money in accordance with the Act.</p>
+		<p>The school may disburse some or all of your loan money by
+			crediting it to your account at the school (if you are a graduate or
+			professional student borrower) or to the student's account at the
+			school (if you are a parent borrower), or may give it to you directly
+			by check or other means. Your servicer will notify you in writing
+			each time the school disburses part of your loan money.</p>
+		<p>If you are a graduate or professional student and have not
+			previously received a Direct PLUS Loan or a Federal PLUS Loan under
+			the Federal Family Education Loan (FFEL) Program, you must receive
+			entrance counseling before your school can make the first
+			disbursement of your loan. Your school will tell you if entrance
+			counseling is required, and will provide instructions for completing
+			entrance counseling.</p>
+		<p>If the school credits your loan money to your or the student's
+			account and the amount credited is more than the amount of the
+			tuition and fees, room and board, and other authorized charges, the
+			excess amount is called a credit balance.</p>
+		<p>Unless you authorize the school to hold the credit balance for
+			you, the school must pay you the credit balance within the following
+			timeframes:</p>
+		<ul>
+			<li>If the credit balance occurs after the first day of class of
+				a payment period (the school can tell you this date), the school
+				must pay you the credit balance no later than 14 days after the date
+				the balance occurs.</li>
+			<li>If the credit balance occurs on or before the first day of
+				class of a payment period, the school must pay you the credit
+				balance no later than 14 days after the first day of class of the
+				payment period.</li>
+		</ul>
+		<p>If you are a parent borrower, you may authorize the school to
+			pay the credit balance to the student.</p>
+
+		<p class="text__subheader">14. CANCELING YOUR LOAN</p>
+
+
+		<p>Before your loan money is disbursed, you may cancel all or part
+			of your loan at any time by notifying the school. After your loan
+			money is disbursed, there are two ways to cancel all or part of your
+			loan:</p>
+		<ul>
+			<li><p>
+					<b>You may notify the school (within certain timeframes).</b> If
+					the school obtains your written confirmation of the types and
+					amounts of Title IV loans that you want to receive for an award
+					year before crediting loan money to your or the student's account
+					at the school, you may tell the school that you want to cancel all
+					or part of that loan within 14 days after the date the school
+					notifies you of your right to cancel all or part of the loan, or by
+					the first day of the school's payment period, whichever is later
+					(the school can tell you the first day of the payment period).
+				</p></li>
+		</ul>
+	</div>
+</div>
+
+<!--  End of Page 8 -->
+<div class="page-break"></div>
+<!--  Start of Page 9 -->
+<div id="page__9">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<div class="faux-list">
+			<p>If the school does not obtain your written confirmation of the
+				types and amounts of loans you want to receive before crediting the
+				loan money to your or the student's account, you may cancel all or
+				part of that loan by informing the school within 30 days of the date
+				the school notifies you of your right to cancel all or part of the
+				loan.</p>
+			<p>If you ask the school to cancel all or part of your loan
+				within the timeframes described above, the school will return the
+				cancelled loan amount to us. If you ask the school to cancel all or
+				part of your loan outside the timeframes described above, the school
+				may process your cancellation request, but it is not required to do
+				so.</p>
+		</div>
+		<ul>
+			<li><p>
+					<b>You may return all or part of your loan to us.</b> Within 120
+					days of the date the school disbursed your loan money (by crediting
+					the loan money to your or the student's account at the school, by
+					paying it directly to you, or both), you may cancel all or part of
+					your loan by returning all or part of the loan money to us. Contact
+					your servicer for guidance on how and where to return your loan
+					money.
+				</p></li>
+		</ul>
+		<p>You do not have to pay interest or the loan fee on the part of
+			your loan that is cancelled or returned within the timeframes
+			described above. We will adjust your loan amount to eliminate any
+			interest and loan fee that applies to the amount of the loan that is
+			cancelled or returned.</p>
+
+		<p>
+		<p class="text__subheader">15. REPAYING YOUR LOAN</p>
+		<p>The repayment period for each Direct PLUS Loan made under this
+			MPN begins on the date of the final disbursement for that loan. This
+			means that the repayment period for each loan you receive under this
+			MPN will begin on a different date. Unless you receive a deferment or
+			forbearance (see Item 21), your first payment on each loan will be
+			due within 60 days of the date of the final disbursement of that
+			loan. Your servicer will notify you of the date your first payment is
+			due.</p>
+
+
+		<p>You must make payments on your loan even if you do not receive
+			a bill or repayment notice.</p>
+
+		<p>You must repay all of your Direct Loans under the same
+			repayment plan, unless you want to repay your loans under the REPAYE
+			Plan, the PAYE Plan, the IBR Plan, or the ICR Plan (see below) and
+			you have other Direct Loans that do not qualify for repayment under
+			those plans. In that case, you may select the REPAYE, PAYE, IBR, or
+			ICR plan for the loans that are eligible for repayment under those
+			plans, and may select a different repayment plan for the loans that
+			may not be repaid under the REPAYE, PAYE, IBR, or ICR plan. Direct
+			PLUS Loans made to a parent borrower may not be repaid under the
+			REPAYE, PAYE, IBR and ICR plans.</p>
+
+		<p>Before your Direct PLUS Loan enters repayment, we will ask you
+			to choose one of the repayment plans listed below. If you do not
+			choose a repayment plan, we will place you on the Standard Repayment
+			Plan.</p>
+
+		<p>
+			<b>Repayment plans for all Direct PLUS Loan borrowers</b>
+		</p>
+
+		<p>The following repayment plans are available to all Direct PLUS
+			Loan borrowers:</p>
+
+		<p>
+			<b>Standard Repayment Plan</b>
+		</p>
+
+		<p>Under the Standard Repayment Plan, you will make fixed monthly
+			payments and repay your loan in full within 10 years (not including
+			periods of deferment or forbearance) from the date the loan entered
+			repayment. Your payments must be at least $50 a month ($600 a year)
+			and will be more, if necessary, to repay the loan within the required
+			time period.</p>
+
+		<p>
+			<b>Graduated Repayment Plan</b>
+		</p>
+
+		<p>Under the Graduated Repayment Plan, you will usually make lower
+			payments at first, and your payments will gradually increase over
+			time. You will repay your loan in full within 10 years (not including
+			periods of deferment or forbearance) from the date the loan entered
+			repayment. Your scheduled monthly payment must at least be equal to
+			the amount of interest that accrues each month. No single scheduled
+			payment will be more than three times greater than any other payment.</p>
+
+		<p>
+			<b>Extended Repayment Plan</b>
+		</p>
+
+		<p>
+			You are eligible for the Extended Repayment Plan only if <b>(1)</b>
+			you have an outstanding balance on Direct Loans that exceeds $30,000,
+			and <b>(2)</b> you had no outstanding balance on a Direct Loan as of
+			October 7, 1998 or on the date you obtained a Direct Loan on or after
+			October 7, 1998.
+		</p>
+
+		<p>Under this plan, you will repay your loan in full over a period
+			not to exceed 25 years (not including periods of deferment or
+			forbearance) from the date the loan entered repayment. You may choose
+			to make fixed monthly payments or graduated monthly payments that
+			start out lower and gradually increase over time. If you make fixed
+			monthly payments, your payments must be at least $50 a month ($600 a
+			year) and will be more, if necessary, to repay the loan within the
+			required time period. If you make graduated payments, your scheduled
+			monthly payment must at least be equal to the amount of interest that
+			accrues each month. No single scheduled payment under the graduated
+			option will be more than three times greater than any other payment.</p>
+
+
+		<p>
+			<b>Additional repayment plans only for graduate and professional
+				student Direct PLUS Loan borrowers</b>
+		</p>
+		<p>
+			<b>Note: Parent Direct PLUS Loan borrowers may not repay their
+				Direct PLUS Loans under these plans. However, if a parent Direct
+				PLUS Loan borrower consolidates a Direct PLUS Loan into a Direct
+				Consolidation Loan, the Direct Consolidation Loan may then be repaid
+				under the ICR Plan described below. See Item 23 for information on
+				loan consolidation.</b>
+		</p>
+
+		<p>If you are a graduate or professional student Direct PLUS Loan
+			borrower, the following additional repayment plans are available:</p>
+
+
+		<b>Revised Pay As You Earn Repayment Plan (REPAYE Plan)</b>
+
+		<p>Under the REPAYE Plan, your monthly payment amount is generally
+			10% of your discretionary income. Discretionary income for this plan
+			is the difference between your adjusted gross income and 150% of the
+			poverty guideline amount for your state of residence and family size,
+			divided by 12.</p>
+
+		<p>If you are married, the income used to determine your REPAYE
+			Plan payment amount will generally be the combined income of you and
+			your spouse, regardless of whether you file a joint or separate
+			federal income tax return.</p>
+
+		<p>While you are repaying under the REPAYE Plan, you must provide
+			documentation of your income (and, if you are married, your spouse's
+			income) and certify your family size each year so that we may
+			recalculate your payment amount.</p>
+
+		<p>Under the REPAYE Plan, if all of the loans you are repaying
+			under the plan were obtained for undergraduate study, any remaining
+			loan amount will be forgiven after you have made the equivalent of 20
+			years of qualifying monthly payments over a period of at least 20
+			years. If any of the loans you are repaying under the REPAYE Plan
+			were obtained for graduate or professional study, any remaining loan
+			amount will be forgiven after you have made the equivalent of 25
+			years of qualifying monthly payments over a period of at least 25
+			years. You may have to pay federal income tax on the loan amount that
+			is forgiven.</p>
+	</div>
+</div>
+
+<!--  End of Page 9 -->
+<div class="page-break"></div>
+<!--  Start of Page 10 -->
+<div id="page__10">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<p>
+			<b>Pay As You Earn Repayment Plan (PAYE Plan)</b>
+		</p>
+
+		<p>Under the PAYE Plan, your monthly payment amount is generally
+			10% of your discretionary income. Discretionary income for this plan
+			is the difference between your adjusted gross income and 150% of the
+			poverty guideline amount for your state of residence and family size,
+			divided by 12.</p>
+
+		<p>If you are married and file a joint federal income tax return,
+			the income used to determine your PAYE Plan payment amount will be
+			the combined adjusted gross income of you and your spouse.</p>
+
+		<p>If you are married and file a separate federal income tax
+			return from your spouse, only your individual adjusted gross income
+			will be used to determine your PAYE Plan payment amount.</p>
+
+		<p>The PAYE Plan is available only to new borrowers. You are a new
+			borrower for the PAYE Plan if:</p>
+		<p>
+			<b>(1)</b> You had no outstanding balance on a Direct Loan or a FFEL
+			Program loan as of October 1, 2007, or you have no outstanding
+			balance on a Direct Loan or a FFEL Program loan when you obtain a new
+			loan on or after October 1, 2007, and
+		</p>
+
+		<p>
+			<b>(2)</b> You receive a disbursement of a Direct Subsidized Loan,
+			Direct Unsubsidized Loan, or student Direct PLUS Loan (a Direct PLUS
+			Loan made to a graduate or professional student) on or after October
+			1, 2011, or you receive a Direct Consolidation Loan based on an
+			application received on or after October 1, 2011. However, you are
+			not considered to be a new borrower for the PAYE Plan if the Direct
+			Consolidation Loan you receive repays loans that would make you
+			ineligible under part <b>(1)</b> of this definition.
+		</p>
+
+		<p>In addition to being a new borrower, to initially qualify for
+			the PAYE Plan, the monthly amount you would be required to pay under
+			this plan, based on your income and family size, must be less than
+			the amount you would have to pay under the Standard Repayment Plan.</p>
+
+		<p>If you are married and file a joint federal income tax return,
+			the loan amount we use to determine whether you qualify for the PAYE
+			Plan will include your eligible loans and your spouse's eligible
+			loans.</p>
+
+		<p>If you are married and file a separate federal income tax
+			return from your spouse, the loan amount we use to determine whether
+			you qualify for the PAYE Plan will include only your eligible loans.</p>
+
+		<p>While you are repaying under the PAYE Plan, you must provide
+			documentation of your income and certify your family size each year
+			so that we may recalculate your payment amount. If your income
+			increases to the point that the amount you would have to pay under
+			the PAYE Plan based on your income is more than what you would have
+			to pay under the Standard Repayment Plan, you will remain on the PAYE
+			Plan, but your monthly payment will no longer be based on your
+			income. Instead, your monthly payment will be what you would be
+			required to pay under the Standard Repayment Plan.</p>
+
+		<p>Under the PAYE Plan, if your loan is not repaid in full after
+			you have made the equivalent of 20 years of qualifying monthly
+			payments over a period of at least 20 years, any remaining loan
+			amount will be forgiven. You may have to pay federal income tax on
+			the loan amount that is forgiven.</p>
+		<p>
+			<b>Income-Based Repayment Plan (IBR Plan)</b>
+		</p>
+
+		<p>Under the IBR Plan, your monthly payment amount is generally
+			15% (10% if you are a new borrower; see Note below) of your
+			discretionary income. Discretionary income for this plan is the
+			difference between your adjusted gross income and 150% of the poverty
+			guideline amount for your state of residence and family size, divided
+			by 12.</p>
+
+		<p>If you are married and file a joint federal income tax return,
+			the income used to determine your IBR Plan payment amount will be the
+			combined adjusted gross income of you and your spouse.</p>
+
+
+		<p>If you are married and file a separate federal income tax
+			return from your spouse, only your individual adjusted gross income
+			will be used to determine your IBR Plan payment amount.</p>
+
+		<p>To initially qualify for the IBR Plan, the monthly amount you
+			would be required to pay under this plan, based on your income and
+			family size, must be less than the amount you would have to pay under
+			the Standard Repayment Plan.</p>
+
+		<p>If you are married and file a joint federal income tax return,
+			the loan amount we use to determine whether you qualify for the IBR
+			Plan will include your eligible loans and your spouse's eligible
+			loans.</p>
+
+		<p>If you are married and file a separate federal income tax
+			return from your spouse, the loan amount we use to determine whether
+			you qualify for the IBR Plan will include only your eligible loans.</p>
+
+		<p>While you are repaying under the IBR Plan, you must provide
+			documentation of your income and certify your family size each year
+			so that we may recalculate your payment amount. If your income
+			increases to the point that the amount you would have to pay under
+			the IBR Plan based on your income is more than what you would have to
+			pay under the Standard Repayment Plan, you will remain on the IBR
+			Plan, but your monthly payment will no longer be based on your
+			income. Instead, your monthly payment will be what you would be
+			required to pay under the Standard Repayment Plan.</p>
+
+		<p>Under the IBR Plan, if your loan is not repaid in full after
+			you have made the equivalent of 25 years (20 years if you are a new
+			borrower) of qualifying monthly payments over a period of at least 25
+			years (20 years if you are a new borrower), any remaining loan amount
+			will be forgiven. You may have to pay federal income tax on the loan
+			amount that is forgiven.</p>
+		<p>
+			<b>NOTE:</b> You are a new borrower for the IBR Plan if you have no
+			outstanding balance on a Direct Loan or a FFEL Program loan on July
+			1, 2014, or if you have no outstanding balance on a Direct Loan or a
+			FFEL Program loan on the date you obtain a Direct Loan after July 1,
+			2014. Your servicer will determine whether you are a new borrower
+			based on the information about your loans in the U.S. Department of
+			Education's National Student Loan Data System.
+		</p>
+		<p>
+			<b>Income Contingent Repayment Plan (ICR Plan)</b>
+		</p>
+		<p>Under the ICR Plan, your monthly payment amount will be either
+			20% of your discretionary income or a percentage of what you would
+			repay under a Standard Repayment Plan with a 12-year repayment
+			period, whichever is less. Discretionary income for this plan is the
+			difference between your adjusted gross income and the poverty
+			guideline amount for your state of residence and family size, divided
+			by 12.</p>
+		<p>If you are married and file a joint federal income tax return,
+			the income used to determine your ICR Plan payment amount will be the
+			combined adjusted gross income of you and your spouse.</p>
+		<p>If you are married and file a separate federal income tax
+			return from your spouse, only your individual adjusted gross income
+			will be used to determine your ICR Plan payment amount.</p>
+		<p>Until we obtain the information needed to calculate your
+			monthly payment amount, your payment will equal the amount of
+			interest that accrues monthly on your loan unless you request a
+			forbearance.</p>
+	</div>
+</div>
+
+<!--  End of Page 10 -->
+<div class="page-break"></div>
+<!--  Start of Page 11 -->
+<div id="page__11">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<p>While you are repaying under the ICR Plan, you must provide
+			documentation of your income and certify your family size each year
+			so that we may recalculate your payment amount.</p>
+		<p>Under the ICR Plan, if your loan is not repaid in full after
+			you have made the equivalent of 25 years of qualifying monthly
+			payments over a period of at least 25 years, any remaining loan
+			amount will be forgiven. You may have to pay federal income tax on
+			the loan amount that is forgiven.</p>
+		<p>
+			<b>Additional repayment plan information</b>
+		</p>
+		<p>If you are a graduate or professional student, these repayment
+			plans will be explained in more detail during your exit counseling
+			session.</p>
+		<p>Under each plan, the number or amount of payments may need to
+			be adjusted to reflect capitalized interest and/or new loans made to
+			you.</p>
+		<p>If you can show to our satisfaction that the terms and
+			conditions of the repayment plans described above are not adequate to
+			meet your exceptional circumstances, we may provide you with an
+			alternative repayment plan.</p>
+		<p>
+			You can use the Repayment Estimator at <a
+				href="http://www.studentaid.gov/Repayment-Estimator" target="_blank">StudentAid.gov/Repayment-Estimator</a>
+			to estimate your monthly and total payment amounts under the
+			different repayment plans and to evaluate your eligibility for the
+			PAYE and IBR plans. The calculators are for informational purposes
+			only. Your servicer will make the official determination of your
+			payment amount and, for the PAYE and IBR plans, your eligibility for
+			the plan.
+		</p>
+		<p>You may change repayment plans at any time after you have begun
+			repaying your loan. However, you may not change to a different
+			repayment plan that has a maximum repayment period of less than the
+			number of years your loan has already been in repayment, except that
+			you may change to the REPAYE Plan, the PAYE Plan, the IBR Plan, or
+			the ICR Plan at any time.</p>
+		<div class=table-space></div>
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b> If you are making payments on the borrower's
+			Direct PLUS Loan, you may request a change of repayment plans by
+			contacting your servicer.
+		</p>
+		<p>If you are making payments under any repayment plan other than
+			the REPAYE Plan, the PAYE Plan, and the IBR Plan, we apply your
+			payments in the following order:</p>
+		<p>1. Late charges and collection costs,</p>
+		<p>2. Outstanding interest, and</p>
+		<p>3. Outstanding principal.</p>
+		<p>If you are making payments under the REPAYE Plan, the PAYE
+			Plan, or the IBR Plan, we apply your payments in the following order:</p>
+		<p>1. Outstanding interest,</p>
+		<p>2. Late charges and collection costs, and</p>
+		<p>3. Outstanding principal.</p>
+		<p>There is no penalty if you make loan payments before they are
+			due, or pay more than the amount due each month (prepayments). We
+			apply any prepayments in accordance with the Act. Your servicer can
+			provide more information about how prepayments are applied.</p>
+		<p>When you have repaid a loan in full, your servicer will send
+			you a notice telling you that you have paid off your loan. You should
+			keep this notice in a safe place.</p>
+
+
+		<p>
+		<p class="text__subheader">16. TRANSFER OF LOAN</p>
+		</p>
+		<p>We may transfer the servicing of one or all of your loans to
+			another servicer. If there is a change in the address to which you
+			must send payments or direct communications, we will notify you of
+			the new servicer's name, address and telephone number, the effective
+			date of the transfer, and the date when you must begin sending
+			payments or directing communications to that servicer. Transfer of a
+			loan to a different servicer does not affect your rights and
+			responsibilities under that loan.</p>
+
+		<p>
+		<p class="text__subheader">17. LATE CHARGES AND COLLECTION COSTS</p>
+		</p>
+		<p>If you do not make any part of a payment within 30 days after
+			it is due, we may require you to pay a late charge. This charge will
+			not be more than six cents for each dollar of each late payment. If
+			you do not make payments as scheduled, we may also require you to pay
+			other charges and fees involved in collecting your loan.</p>
+		<p>
+		<p class="text__subheader">18. DEMAND FOR IMMEDIATE REPAYMENT</p>
+		</p>
+		<p>The entire unpaid amount of your loan becomes due and payable
+			(this is called "acceleration") if you:</p>
+
+		<ul>
+			<li>Receive loan money, but you or the student for whom you
+				obtained the loan do not begin attendance in any classes at the
+				school that determined you were eligible to receive the loan;</li>
+			<li>Use your loan money to pay for anything other than expenses
+				related to your or the student's education at the school that
+				determined you were eligible to receive the loan;</li>
+			<li>Make a false statement that causes you to receive a loan
+				that you are not eligible to receive; or</li>
+			<li>Default on your loan.</li>
+		</ul>
+		<p>
+		<p class="text__subheader">19. DEFAULTING ON YOUR LOAN</p>
+		<p>Default (failing to repay your loan) is defined in detail in
+			the MPN Terms and Conditions section of your MPN. If you default:</p>
+		<ul>
+			<li>We will require you to immediately repay the entire unpaid
+				amount of your loan.</li>
+			<li>We may sue you, take all or part of your federal and state
+				tax refunds and other federal or state payments, and/or garnish your
+				wages so that your employer is required to send us part of your
+				salary to pay off your loan.</li>
+			<li>We will require you to pay reasonable collection fees and
+				costs, plus court costs and attorney fees.</li>
+			<li>You will lose eligibility for other federal student aid and
+				assistance under most federal benefit programs.</li>
+			<li>You will lose eligibility for loan deferments.</li>
+			<li>We will also report your default to nationwide consumer
+				reporting agencies (see Item 20). This will harm your credit history
+				and may make it difficult for you to obtain credit cards, home or
+				car loans, or other forms of consumer credit.</li>
+		</ul>
+		<p>If you default on your loan, you will not be charged collection
+			costs if you respond within 60 days to the initial notice of default
+			that we send to you, and you enter into a repayment agreement with
+			us, including a loan rehabilitation agreement, and fulfill that
+			agreement.</p>
+		<div class=table-space></div>
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b> If the borrower defaults on the loan, and you
+			do not make payments on the loan, you may also be subject to the
+			actions described above.
+		</p>
+		<p>
+		<p class="text__subheader">20. CONSUMER REPORTING AGENCY
+			NOTIFICATION</p>
+		<p>We will report information about your loan to nationwide
+			consumer reporting agencies (commonly known as "credit bureaus") on a
+			regular basis. This information will include the disbursement dates,
+			amount, and repayment status of your loan (for example, whether you
+			are current or delinquent in making payments). Your loan will be
+			identified as an education loan.</p>
+		<p>
+			If you default on a loan, we will report this to nationwide consumer
+			reporting agencies. We will notify you at least 30 days in advance
+			that we plan to report default information to a consumer reporting
+			agency unless you resume making payments on the loan within 30 days
+			of the date of the notice. You will be given a chance to ask for a
+			review of the debt before we report it.<br>
+	</div>
+</div>
+
+<!--  End of Page 11 -->
+<div class="page-break"></div>
+<!--  Start of Page 12 -->
+<div id="page__12">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<p>If a consumer reporting agency contacts us regarding objections
+			you have raised about the accuracy or completeness of any information
+			we have reported, we are required to provide the agency with a prompt
+			response.</p>
+		<div class=table-space></div>
+
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b> If the borrower of a Direct PLUS Loan becomes
+			delinquent in making payments or defaults on the loan, we may also
+			report your name to consumer reporting agencies in connection with
+			the delinquent or defaulted loan.
+		</p>
+
+		<p class="text__subheader">21. DEFERMENT AND FORBEARANCE
+			(POSTPONING PAYMENTS)</p>
+		<b>General</b>
+		<p>If you meet certain requirements, you may receive a deferment
+			that allows you to temporarily stop making payments on your loan. If
+			you cannot make your scheduled loan payments, but do not qualify for
+			a deferment, we may give you a forbearance. A forbearance allows you
+			to temporarily stop making payments on your loan, temporarily make
+			smaller payments, or extend the time for making payments.</p>
+
+		<b>Deferment</b>
+		<p>You may receive a deferment:</p>
+		<ul>
+			<li>While you are enrolled at least half-time at an eligible
+				school;</li>
+			<li>During the 6-month period after you cease to be enrolled at
+				least half-time;</li>
+			<li>While the student for whom you obtained a Direct PLUS Loan
+				is enrolled at least half-time at an eligible school;</li>
+			<li>During the 6-month period after the student for whom you
+				obtained a Direct PLUS Loan ceases to be enrolled at least
+				half-time;</li>
+			<li>While you are in a full-time course of study in a graduate
+				fellowship program;</li>
+			<li>While you are in an approved full-time rehabilitation
+				program for individuals with disabilities;</li>
+			<li>While you are unemployed (for a maximum of three years; you
+				must be diligently seeking, but unable to find, full-time
+				employment);</li>
+			<li>While you are experiencing an economic hardship (including
+				Peace Corps service), as defined in the Act (for a maximum of three
+				years);</li>
+			<li>While you are serving on active duty during a war or other
+				military operation or national emergency or performing qualifying
+				National Guard duty during a war or other military operation or
+				national emergency and, if you were serving on or after October 1,
+				2007, for an additional 180-day period following the demobilization
+				date for your qualifying service; or</li>
+			<li>If you are a member of the National Guard or other reserve
+				component of the U.S. Armed Forces (current or retired) and you are
+				called or ordered to active duty while you are enrolled at least
+				half-time at an eligible school or within 6 months of having been
+				enrolled at least half-time, during the 13 months following the
+				conclusion of your active duty service, or until you return to
+				enrolled student status on at least a half-time basis, whichever is
+				earlier.</li>
+		</ul>
+		<p>You may be eligible to receive additional deferments if, at the
+			time you received your first Direct Loan, you had an outstanding
+			balance on a loan made under the FFEL Program before July 1, 1993. If
+			you meet this requirement, contact your servicer for information
+			about additional deferments that may be available.</p>
+		<p>You may receive a deferment while you are enrolled in school on
+			at least a half-time basis (and, if you are a graduate or
+			professional student, during the 6-month period after you cease to be
+			enrolled at least half-time) if:</p>
+		<ul>
+			<li>You submit a deferment request to your servicer along with
+				documentation of your eligibility for the deferment, or</li>
+			<li>Your servicer receives information from the school you are
+				attending that indicates you are enrolled at least half-time.</li>
+		</ul>
+		<p>If your servicer processes a deferment based on information
+			received from your school, you will be notified of the deferment and
+			will have the option of canceling the deferment and continuing to
+			make payments on your loan.</p>
+		<p>For all other deferments, you (or, for a deferment based on
+			active duty military service or qualifying National Guard duty during
+			a war or other military operation or national emergency, a
+			representative acting on your behalf) must submit a deferment request
+			to your servicer, along with documentation of your eligibility for
+			the deferment. In certain circumstances, you may not be required to
+			provide documentation of your eligibility if your servicer confirms
+			that you have been granted the same deferment for the same period of
+			time on a FFEL Program loan. Your servicer can provide you with a
+			deferment request form that explains the eligibility and
+			documentation requirements for the type of deferment you are
+			requesting. You may also obtain deferment request forms and
+			information on deferment eligibility requirements from your
+			servicer's web site.</p>
+		<p>If you are in default on your loan, you are not eligible for a
+			deferment.</p>
+		<p>You are responsible for paying the interest on a Direct PLUS
+			Loan during a period of deferment.</p>
+		<div class=table-space></div>
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b> You are not eligible to receive a deferment.
+		</p>
+		<b>Forbearance</b>
+		<p>
+			We may give you a forbearance if you are temporarily unable to make
+			your scheduled loan payments for reasons including, but not limited
+			to, financial hardship and illness.<br> We will give you a
+			forbearance if:
+		</p>
+		<ul>
+			<li>You are serving in a medical or dental internship or
+				residency program, and you meet specific requirements;</li>
+			<li>The total amount you owe each month for all of the student
+				loans you received under Title IV of the Act (Direct Loan Program
+				loans, FFEL Program loans, and Federal Perkins Loans) is 20% or more
+				of your total monthly gross income (for a maximum of three years);</li>
+			<li>You are serving in a national service position for which you
+				receive a national service education award under the National and
+				Community Service Trust Act of 1993. In some cases, the interest
+				that accrues on a qualified loan during the service period will be
+				paid by the Corporation for National and Community Service;</li>
+			<li>You qualify for partial repayment of your loans under a
+				student loan repayment program administered by the Department of
+				Defense; or</li>
+			<li>You are called to active duty in the U.S. Armed Forces.</li>
+		</ul>
+		<p>To request a forbearance, contact your servicer. Your servicer
+			can explain the eligibility and documentation requirements for the
+			type of forbearance you are requesting. You may also obtain
+			information on forbearance eligibility requirements from your
+			servicer's web site.</p>
+		<p>Under certain circumstances, we may also give you a forbearance
+			without requiring you to submit a request or documentation. These
+			circumstances include, but are not limited to, the following:</p>
+	</div>
+</div>
+
+<!--  End of Page 12 -->
+<div class="page-break"></div>
+<!--  Start of Page 13 -->
+<div id="page__13">
+	<div class="section_mpn-tc">
+		<p class="page-header">William D. Ford Federal Direct Loan Program</p>
+		<p class="page-header">Direct PLUS Loan Borrower's Rights and
+			Responsibilities Statement</p>
+		<hr>
+	</div>
+	<div class="two-columns">
+		<ul>
+			<li>Periods necessary for us to determine your eligibility for a
+				loan discharge;</li>
+			<li>A period of up to 60 days in order for us to collect and
+				process documentation related to your request for a deferment,
+				forbearance, change in repayment plan, or consolidation loan (we do
+				not capitalize the interest that is charged during this period);</li>
+			<li>Periods when you are involved in a military mobilization, or
+				a local or national emergency; or</li>
+			<li>Periods necessary to align repayment of Direct PLUS Loans
+				that do not qualify for a 6-month post-enrollment deferment with
+				other Direct PLUS Loans that qualify for this deferment, or with
+				Direct Subsidized Loans and Direct Unsubsidized Loans that have a
+				grace period. Contact your servicer for more information.</li>
+		</ul>
+		<p>You are responsible for paying the interest on a Direct PLUS
+			Loan during a period of forbearance.</p>
+		<div class=table-space></div>
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b> <br> You may request a forbearance.
+		</p>
+
+		<p class="text__subheader">22. DISCHARGE (HAVING YOUR LOAN
+			FORGIVEN)</p>
+		<b>Death, bankruptcy, and total and permanent disability </b>
+		<p>We will discharge (forgive) your loan if:</p>
+		<ul>
+			<li>You die, or the child on whose behalf you obtained a Direct
+				PLUS Loan dies. Your servicer must receive acceptable documentation
+				(as defined in the Act) of your death or the child's death.</li>
+			<li>Your loan is discharged in bankruptcy after you have proven
+				to the bankruptcy court that repaying the loan would cause undue
+				hardship. Direct Loans are not automatically discharged if you file
+				for bankruptcy.</li>
+			<li>You become totally and permanently disabled (as defined in
+				the Act) and meet certain other requirements.</li>
+		</ul>
+		<b>School closure, false certification, identity theft, and unpaid
+			refund</b><br>
+		<p>In certain cases, we may also discharge all or a portion of
+			your loan if:</p>
+		<ul>
+			<li>You (or the child on whose behalf you obtained a Direct PLUS
+				Loan) could not complete a program of study because the school
+				closed;</li>
+			<li>Your loan eligibility was falsely certified by the school;</li>
+			<li>A loan in your name was falsely certified as a result of a
+				crime of identity theft; or</li>
+			<li>The school did not pay a refund of your loan money that it
+				was required to pay under federal regulations.</li>
+		</ul>
+		<b>Public Service Loan Forgiveness</b>
+		<p>A Public Service Loan Forgiveness (PSLF) program is also
+			available. Under this program, we will forgive the remaining balance
+			due on your eligible Direct Loan Program loans after you have made
+			120 payments on those loans (after October 1, 2007) under certain
+			repayment plans while you are employed full-time in certain public
+			service jobs. The required 120 payments do not have to be
+			consecutive. Qualifying repayment plans include the REPAYE Plan, the
+			PAYE Plan, the IBR Plan, the ICR Plan, and the Standard Repayment
+			Plan with a 10-year repayment period.</p>
+		<p>
+			<b>Note:</b> Although the Standard Repayment Plan with a 10-year
+			repayment period is a qualifying repayment plan for PSLF, to receive
+			any loan forgiveness under this program you must make the majority of
+			the required 120 payments under the REPAYE Plan, the PAYE Plan, the
+			IBR Plan, or the ICR Plan.
+		</p>
+		<b>Additional loan discharge information</b>
+		<p>The Act may provide for certain loan forgiveness or repayment
+			benefits on your loans in addition to the benefits described above.</p>
+		<p>For a discharge based on your death or the death of the child
+			on whose behalf you obtained a Direct PLUS Loan, a family member must
+			contact your loan servicer. To request loan discharge or forgiveness
+			based on one of the other conditions described above (except for a
+			discharge due to bankruptcy), you must complete an application. Your
+			servicer can tell you how to apply.</p>
+		<p>In some cases, you may assert, under applicable law and
+			regulations, a defense against repayment of your loan on the basis
+			that the school did something wrong or failed to do something that it
+			should have done. You can make such a defense against repayment only
+			if the school's act or omission directly relates to your loan or to
+			the educational services that the loan was intended to pay for. If
+			you believe that you have a defense against repayment of your loan,
+			contact your servicer.</p>
+		<p>We do not guarantee the quality of the academic programs
+			provided by schools that participate in federal student financial aid
+			programs. You must repay your loan even if you or (if you are a
+			parent borrower) the student do not complete the education paid for
+			with the loan, are unable to obtain employment in the field of study
+			for which the school provided training, or are dissatisfied with, or
+			do not receive, the education paid for with the loan.</p>
+		<div class=table-space></div>
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b><br>If we discharge the full amount of
+			the borrower's loan for any of the reasons described above, you are
+			no longer obligated to make any payments on the loan. However, if the
+			loan is reinstated after a discharge and the borrower does not make
+			the required payments, you will be obligated to make payments on the
+			loan.
+		</p>
+		<p class="text__subheader">23. LOAN CONSOLIDATION</p>
+		<p>A Direct Consolidation Loan Program is available that allows
+			you to consolidate one or more of your eligible federal education
+			loans into a new loan with a single monthly payment, and may allow
+			you to extend the period of time that you have to repay your loans.
+			This may make it easier for you to repay your loans. However, you
+			will pay more interest if you extend your repayment period through
+			consolidation, since you will be making payments for a longer period
+			of time. Contact your servicer for more information about loan
+			consolidation.</p>
+		<div class=table-space></div>
+		<p class="note-to-endorser">
+			<b>NOTE TO ENDORSER</b><br>You are not eligible to apply for a
+			Direct Consolidation Loan to repay a Direct PLUS Loan for which you
+			are the endorser.
+		</p>
+		<p class="text__subheader">24. DEPARTMENT OF DEFENSE AND OTHER
+			FEDERAL AGENCY LOAN REPAYMENT</p>
+		<p>Under certain circumstances, military personnel may have their
+			federal education loans repaid by the Secretary of Defense. This
+			benefit is offered as part of a recruitment program that does not
+			apply to individuals based on their previous military service or to
+			those who are not eligible for enlistment in the U.S. Armed Forces.
+			For more information, contact your local military service recruitment
+			office.
+		<p>Other agencies of the federal government may also offer student
+			loan repayment programs as an incentive to recruit and retain
+			employees. Contact the agency's human resources department for more
+			information.</p>
+		<b>END OF BORROWER'S RIGHTS AND RESPONSIBILITIES STATEMENT</b>
+	</div>
+
+</div>
+
+<!--  End of Page 13 -->
+<div class="page-break"></div>
+<!--  Start of Page 14 -->
+<div id="page__14">
+	<div class="section_mpn-tc">
+		<p class="page-header">INSTRUCTIONS</p>
+		<p class="page-header">ENDORSER ADDENDUM TO MASTER PROMISSORY NOTE
+			FOR DIRECT PLUS LOANS</p>
+		<br>
+	</div>
+	<div class="two-columns gap-large">
+		<b>GENERAL INSTRUCTIONS AND INFORMATION</b>
+		<hr>
+		<p>Print using blue or black ink to complete the Endorser
+			Information and Reference Information sections of this Addendum. Do
+			not use pencil. Enter all dates as month-day-year (mm-dd-yyyy). Use
+			only numbers. Example: January 31, 2017 = 01/31/2017.</p>
+
+		<p>Throughout the Endorser Addendum and the accompanying
+			Borrower's Rights and Responsibilities Statement, the words "we,"
+			"us," "our" and "ED" refer to the U.S. Department of Education.</p>
+
+		<b>ENDORSER INFORMATION</b>
+
+		<hr>
+
+		<p>
+			<b><span>Item 1. </span></b>Enter your first name, then your middle
+			initial and last name.
+		</p>
+
+		<p>
+			<b><span>Item 2. </span></b>Enter your nine-digit Social Security
+			Number.
+		</p>
+
+		<p>
+			<b><span>Item 3. </span></b>Enter your date of birth.
+		</p>
+
+		<p>
+			<b><span>Item 4. </span></b>Enter your permanent address (number,
+			street, apartment number, or rural route number and box number, then
+			city, state, zip code). If your mailing address is a post office box
+			or general delivery, you must list <b>both</b> your street address
+			and your mailing address.
+		</p>
+
+		<p>
+			<b><span>Item 5. </span></b> Enter the area code and telephone number
+			at which you can most easily be reached. (Do not list your work
+			telephone number here.) If you do not have a telephone, enter N/A.
+		</p>
+
+		<p>
+			<b><span>Item 6. </span></b>Enter the two-letter state abbreviation
+			for the state that issued your current driver's license, followed by
+			your driver's license number. If you do not have a driver's license,
+			enter N/A.
+		</p>
+		<p>
+			<b><span>Item 7. </span></b>Enter your preferred email address for
+			receiving communications. You are not required to provide this
+			information. If you do, we may use your email address to communicate
+			with you. If you do not have an email address or do not wish to
+			provide one, enter N/A.
+		</p>
+
+		<p>
+			<b><span>Item 8. </span></b>Place a check in the box that corresponds
+			to your citizenship status. If you check box (2), enter your Alien
+			Registration Number.
+		</p>
+		<p>
+			<b><span>(1) </span></b>"U.S. Citizen" includes citizens of the 50
+			states, the District of Columbia, Puerto Rico, the U.S. Virgin
+			Islands, Guam, and the Northern Mariana Islands. "National" includes
+			not only all U.S. citizens, but also citizens of American Samoa and
+			Swain's Island.
+		</p>
+
+		<p>
+			<b><span>(2) </span></b>"Permanent Resident" means someone who can
+			provide documentation of this status from the U.S. Citizenship and
+			Immigration Services (USCIS). "Other Eligible Non-Citizen" includes
+			individuals who can provide documentation from the USCIS that they
+			are in the United States for a purpose that is not temporary, with
+			the intention of becoming a citizen or permanent resident. This
+			category includes refugees, persons granted asylum, Cuban-Haitian
+			entrants, temporary residents under the Immigration Reform and
+			Control Act of 1986, and others.
+		</p>
+		<p>
+			<b>NOTE: If your citizenship status is not one of the categories
+				described above, you are not eligible to be an endorser.</b>
+		</p>
+
+		<p>
+			<b><span>Item 9. </span></b>Enter your employer's name. If you are
+			self-employed, enter the name of your business. If you are not
+			employed, enter N/A.
+		</p>
+
+		<p>
+			<b><span>Item 10. </span></b>Enter your employer's address (number,
+			street, city, state, zip code) or, if you are self-employed, the
+			address of your business.
+		</p>
+
+		<p>
+			<b><span>Item 11. </span></b>Enter your work area code and telephone
+			number. If you are self-employed, enter the area code and telephone
+			number of your business.
+		</p>
+
+		<div class="break-column"></div>
+		<b><span>REFERENCE INFORMATION</span></b>
+
+		<hr>
+		<p>
+			<b><span>Items 12 and 13. </span></b>Enter the requested information
+			for two adults with different U.S. addresses who do not live with
+			you, and who have known you for at least three years and will know
+			how to contact you in the future. Do not list the Direct PLUS Loan
+			borrower or the student as references. Providing an email address for
+			a reference is optional. If you provide an email address for a
+			reference, we may use it to communicate with the reference. If a
+			reference does not have a telephone number or email address, or does
+			not wish to provide an email address, enter N/A.
+		</p>
+
+
+		<b><span>BORROWER INFORMATION</span></b>
+
+		<hr>
+		<p>This section will be completed by ED.</p>
+
+		<b><span>DEPENDENT UNDERGRADUATE STUDENT INFORMATION</span></b>
+
+		<hr>
+		<p>This section will be completed by ED if the Direct PLUS Loan
+			borrower is the parent of a dependent undergraduate student. If the
+			Direct PLUS Loan borrower is a graduate or professional student, this
+			section will be blank and you do not need to complete it. Information
+			about the student will be in the Borrower Information Section.</p>
+		<p>
+			<b><span>ENDORSER'S PROMISE TO PAY</span></b>
+		</p>
+		<hr>
+		<p>
+			<span><b>Top of Page 2: </b> Enter your name and Social
+				Security Number.</span><br> <span><b>Items 24, 25, 26, 27,
+					28, 29 and 30.</b> Read these items carefully.</span><br> <span><b>Items
+					31 and 32.</b> Sign your full legal name, in blue or black ink, and
+				enter the date you signed this Addendum.</span>
+		</p>
+	</div>
+</div>
+</body>
 </html>

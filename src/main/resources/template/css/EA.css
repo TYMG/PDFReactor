@@ -1,7 +1,506 @@
-html {
-	height:100%
+html, body {
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p {
+	margin: 0 auto;
 }
 
 h3 {
-	color:red;
+	color: red;
 }
+
+hr {
+	color: black;
+	border-width: 5px 0 0 0;
+}
+
+ol>li {
+	flex: 1;
+	margin: 0;
+	padding: 0 0 0 2em;
+	text-indent: -2em;
+	list-style-type: none;
+	counter-increment: item;
+}
+
+ol>li:before {
+	display: inline-block;
+	width: 1.5em;
+	padding-right: 0.5em;
+	font-weight: bold;
+	text-align: right;
+	content: counter(item) ".";
+}
+
+footer {
+	position: running(footerIdentifier)
+}
+
+/**
+
+@Page
+
+**/
+@page {
+	counter-increment: page; @bottom-center { content : "Page " counter(
+	page) " of " counter( pages);
+	font-size: 0.6em;
+}
+
+}
+
+/*****************
+
+Common Style Elements 
+
+*****************/
+.page-break {
+	break-before: always;
+}
+
+.underline {
+	border-bottom: 1px solid;
+}
+
+.field-response-padding {
+	padding: 2px 10px;
+}
+
+.padding {
+	padding: 1px 0;
+}
+
+/****************
+
+Column Styles
+
+*****************/
+div.two-columns {
+	column-count: 2;
+	column-width: 2.5in;
+	font-size: .65rem;
+	column-gap: .4in;
+}
+
+div.two-columns>p {
+	padding: 1%
+}
+
+.text__subheader {
+	font-weight: bold;
+	padding: 2% 0;
+}
+
+.text__smaller-font {
+	font-size: .45rem;
+}
+
+.gap-large {
+	column-gap: .5in;
+}
+
+.gap-medium {
+	column-gap: .3in;
+}
+
+.column-fill-auto {
+	column-fill: auto;
+}
+
+.column-fill-bal {
+	column-fill: balance;
+}
+
+.break-column {
+	break-before: column;
+}
+
+.flexbox-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flexbox-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.display-inline {
+	display: inline;
+}
+
+.flex-1 {
+	flex: 1 0 0;
+}
+
+.flex-2 {
+	-webkit-flex: 2 0 0;
+	flex: 2 0 0;
+}
+
+.label {
+	font-weight: bold;
+}
+
+.section-label {
+	font-size: .6rem;
+	font-weight: bold;
+}
+
+/**
+
+Header
+
+**/
+.form__header {
+	font-size: .5rem;
+	height: 100%;
+}
+
+.form__header-icon {
+	flex: 1 0 auto;
+	width: 10%;
+}
+
+image {
+	-ro-replacedelement: image;
+	-ro-source: -ro-attr(source);
+}
+
+.icon {
+	background: url(../images/smiley.jpg);
+	height: 50px;
+	width: 50px;
+}
+
+.form__header-title {
+	flex: 6 0 auto;
+	width: 80%;
+}
+
+div.form__header-title>p {
+	font-weight: bold;
+	font-size: 2em;
+}
+
+.form__header-omb {
+	flex: 1 0 auto;
+	width: 25%;
+}
+
+div.form__header-omb>p {
+	font-size: 8px;
+	margin: 0 auto;
+	padding: 1px;
+}
+
+/*************
+
+Form Section
+
+*************/
+.form__section-fields {
+	width: 100%;
+}
+
+/*****
+
+Section
+
+*****/
+.note-to-endorser {
+	padding: 0 2% 2%;
+}
+
+/***************
+
+Page Titles
+
+***************/
+.page-header {
+	font-size: .75rem;
+	font-weight: bold;
+}
+
+/******
+
+Page 1 
+
+******/
+#page__1 {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#page__1-title {
+	width: 100%;
+	flex: 0 1 0;
+	/* height:5%; */
+}
+
+#page__1-warning {
+	flex: 0 1 0;
+	font-size: 1.25em;
+	padding: 1% 0;
+
+	/* height:3%; */
+}
+
+#page__1-byb {
+	/* height:7%; */
+	flex: 0 1 0;
+	padding-bottom: 2%;
+	font-size: 1.25em;
+}
+
+#page__1-form-section {
+	/* height:75%; */
+	flex: 3 2 0;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.25em;
+}
+
+#endorser_info {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 2%;
+	flex: 0 2 0;
+}
+
+.tg {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.tg td {	
+	overflow: hidden;
+	word-break: normal;
+}
+
+.tg th {
+	
+	font-weight: normal;
+	overflow: hidden;
+	word-break: normal;
+}
+
+.tg .tg-yw4l {
+	vertical-align: top
+}
+
+
+.form__section-endr-info>div {
+	height: 25px;
+}
+
+div.medium_endsr_field {
+	height: 45px;
+}
+
+div.large_endsr_field {
+	height: 75px;
+}
+
+.citzenship_status {
+	height: 60px;
+	padding: 3% 0;
+}
+
+#reference_info {
+	width: 100%;
+	flex: 0 2 0;
+}
+
+.reference_row {
+	padding: 1% 0;
+}
+
+.reference_row>* {
+	display: inline-block;
+}
+
+.ref__fn {
+	width: 35%;
+}
+
+.ref__mi {
+	width: 10%;
+}
+
+.ref__ln {
+	width: 23%;
+}
+
+.ref__addr {
+	width: 100%;
+}
+
+.ref__email {
+	width: 50%;
+}
+
+.ref__phone {
+	width: 30%;
+}
+
+#borrower_info {
+	padding-top: 2% 0; width : 100%;
+	flex: 1 0 0;
+	width: 100%;
+}
+
+.form__section-brwr-info{
+	width:50%
+}
+.form__section-brwr-info>div {
+	height: 25px;
+}
+
+div.large_bwr_field {
+	height: 60px;
+}
+
+/******
+
+Page 2 
+
+******/
+#page__2 {
+	font-size: .6rem;
+}
+
+.section__endorsers-info {
+	padding-bottom: 3%;
+}
+
+.section__endorsers-info>p.label {
+	font-size: .6rem;
+}
+
+.field__endorser-name {
+	width: 45%;
+}
+
+.label__endorser-ssn {
+	margin-left: 1%;
+}
+
+.field__endorser-ssn {
+	width: 19%;
+}
+
+.section__dependent-undergrad {
+	font-size: .6rem;
+}
+
+.section__dependent-undergrad ol {
+	margin: 0 0 1.5em;
+	padding: 0;
+	counter-reset: item 21;
+}
+
+.section__endorser-ptp ol {
+	margin: 0 0 1.5em;
+	padding: 0;
+	counter-reset: item 23;
+}
+
+ol.endorser-ptp__list>li {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.section__understand {
+	text-align: center;
+	padding-bottom: 3%;
+}
+
+.section__endorser-sig ol {
+	margin: 0 0 1.5em;
+	padding: 0;
+	counter-reset: item 30;
+	margin: 0 0 1.5em;
+}
+
+.section__endorser-sig-fields {
+	display: inline-block;
+}
+
+.todays-date {
+	width: 50%;
+}
+
+.endorser-sig {
+	width: 75%;
+}
+
+/*******************
+
+Page 8
+
+*******************/
+.table-space {
+	padding: 5px 0px;
+}
+
+.page__8-table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 75%;
+}
+
+.page__8-table td {
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 5%;
+	overflow: hidden;
+	word-break: normal;
+}
+
+.page__8-table th {
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	overflow: hidden;
+	word-break: normal;
+}
+
+.page__8-table .column-1 {
+	vertical-align: top;
+	font-weight: bold;
+	width: 35%;
+}
+
+.page__8-table .column-2 {
+	vertical-align: top;
+	width: 30%;
+}
+
+.page__8-table .column-3 {
+	vertical-align: top;
+	width: 35%;
+}
+
+/************************
+
+Page 9
+
+************************/
+
+/**
+
+There is a page break in the middle of the Section 14's list. 
+The CSS below is trying to mimic the break and the indentation from the list 
+
+**/
+.faux-list {
+	margin-left: 10%;
+}
+
+/* div.field__endorser-sig {
+  display:inline;
+} */
