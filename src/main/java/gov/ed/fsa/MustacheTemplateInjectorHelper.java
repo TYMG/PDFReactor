@@ -93,4 +93,5 @@ public class MustacheTemplateInjectorHelper {
 	public void setTodaysDate() {
 		this.todaysDate = Calendar.getInstance().getTime().toString();
 	}
+	
 }

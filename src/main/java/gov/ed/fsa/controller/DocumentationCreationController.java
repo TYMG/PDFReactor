@@ -26,7 +26,7 @@ import gov.ed.fsa.service.DocumentService;
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/Document/")
-public class DocumentatinCreationController {
+public class DocumentationCreationController {
 	
 	private DocumentService docService; 
 
@@ -46,7 +46,7 @@ public class DocumentatinCreationController {
 	    	return null;
 	    }
 	    
-	    @RequestMapping(value = "/EA" , method = RequestMethod.POST)
+	    @RequestMapping(value = "/EA/Default" , method = RequestMethod.POST)
 	    @ResponseBody
 	    public ResponseEntity<ByteArrayResource> createEADocument(@RequestBody EAForm form ){
 	    	System.out.println("Create EA Document Hit");

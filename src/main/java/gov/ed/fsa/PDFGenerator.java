@@ -88,7 +88,7 @@ public class PDFGenerator {
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("template/css/EA.css"); //
 		try {
 			IOUtils.copy(is,
-					mustacheTemplateWriter, StandardCharsets.UTF_8);
+					mustacheTemplateWriter);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
