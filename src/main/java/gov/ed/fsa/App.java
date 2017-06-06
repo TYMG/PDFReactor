@@ -1,35 +1,26 @@
 package gov.ed.fsa;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.util.HashMap;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import javax.xml.transform.TransformerException;
-
-import org.apache.commons.io.FileUtils;
-import org.xml.sax.SAXException;
-
-import com.github.mustachejava.DefaultMustacheFactory;
-import com.github.mustachejava.Mustache;
-import com.github.mustachejava.MustacheFactory;
-import com.realobjects.pdfreactor.Configuration;
-import com.realobjects.pdfreactor.PDFreactor;
-import com.realobjects.pdfreactor.Result;
-import com.realobjects.pdfreactor.Exceptions.PDFreactorException;
-
-public class App {
-
-	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		PDFGenerator pdfGen = new PDFGenerator();
-		pdfGen.generatePDF("EA");
-
-	}
-	
-
-	
-
+@SpringBootApplication
+public class App 
+{
+    public static void main(String[] args) {
+        SpringApplication.run(App.class, args);
+    }
+    
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/EA").allowedOrigins("http://localhost:3000");
+            }
+        };
+    }
 }

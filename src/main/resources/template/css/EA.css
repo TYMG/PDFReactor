@@ -16,6 +16,11 @@ hr {
 	border-width: 5px 0 0 0;
 }
 
+input {
+	font-size:.6rem;
+	padding-left:2px;
+}
+
 ol>li {
 	flex: 1;
 	margin: 0;
