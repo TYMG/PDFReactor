@@ -17,6 +17,7 @@ import org.apache.commons.io.IOUtils;
 import org.xml.sax.SAXException;
 
 import com.realobjects.pdfreactor.Configuration;
+import com.realobjects.pdfreactor.Configuration.Conformance;
 import com.realobjects.pdfreactor.Configuration.Resource;
 import com.realobjects.pdfreactor.PDFreactor;
 import com.realobjects.pdfreactor.Result;
@@ -28,19 +29,18 @@ public class PDFGenerator {
 	private Configuration config;
 	private MustacheTemplateInjector mti;
 	
-	PDFGenerator(){
+	public PDFGenerator(){
 		PDFreactor pdfReactor = new PDFreactor();	
 		this.setPdfReactor(pdfReactor);
 		Configuration config = new Configuration();
 		config.setFullCompression(true);
-		//config.setConformance(Conformance.PDFA3A_PDFUA1);
-		this.setConfig(config);
-		MustacheTemplateInjector mti =  new MustacheTemplateInjector();
-		this.setMustacheTemplateInjector(mti);
+		config.setConformance(Conformance.PDFA3A_PDFUA1);
+		config.setBaseURL("file:///C:/Users/Matthew.A.Green/git/PDFReactor/src/main/resources/template/images/");
 		config.setLicenseKey("<license> <licensee> <name>matthew.a.green@accenturefederal.com</name> </licensee> <product>PDFreactor</product> <licensetype>Personal</licensetype> <purchasedate>2017-05-22</purchasedate> <outputformats> <pdf/> </outputformats> <signatureinformation> <signdate>2017-05-22 22:26</signdate> <signature>302c02142126026f29d29003e0011b46e94719611f4004fb02142e182b44ab71714f913f3343fcf2c4c3c7a9e318</signature> <checksum>1512</checksum> </signatureinformation> </license>");
+		this.setConfig(config);
 	}
 	
-	public void generatePDF(String fileName){
+	public byte[] generatePDF(String fileName, String convertedMustacheHtml){
 	/*	try {
 			extractBytes("test");
 		} catch (IOException e1) {
@@ -48,15 +48,15 @@ public class PDFGenerator {
 			e1.printStackTrace();
 		}*/
 		config.setUserStyleSheets(new Resource().setContent(retrieveCSSStyling("teest")));
-		config.setDocument(mti.toHtml(fileName));
+		config.setDocument(convertedMustacheHtml);
 		//config.setBaseURL("file:///directory/");
-		
+		byte[] pdfBytes = null;
 		try {
 			Result result = pdfReactor.convert(config);
 			
-			byte[] pdfBytes  = result.getDocument();
+			pdfBytes  = result.getDocument();
 			
-			FileUtils.writeByteArrayToFile(new File("C://Users//Matthew.A.Green/Documents/PDF Reactor/EA.pdf"), pdfBytes);
+			FileUtils.writeByteArrayToFile(new File("C://Users//Matthew.A.Green/Documents/PDF Reactor/EA (with Icon).pdf"), pdfBytes);
 					
 		} catch (PDFreactorException e) {
 			// TODO Auto-generated catch block
@@ -70,7 +70,8 @@ public class PDFGenerator {
 		} catch (TransformerException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}		
+		}
+		return pdfBytes;
 	}
 	
 	/**
@@ -87,7 +88,7 @@ public class PDFGenerator {
 		InputStream is = this.getClass().getClassLoader().getResourceAsStream("template/css/EA.css"); //
 		try {
 			IOUtils.copy(is,
-					mustacheTemplateWriter, StandardCharsets.UTF_8);
+					mustacheTemplateWriter);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

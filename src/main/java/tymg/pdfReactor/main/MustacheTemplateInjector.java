@@ -18,6 +18,18 @@ import gov.ed.fsa.model.Student;
 
 public class MustacheTemplateInjector {
 
+	private MustacheFactory mf;
+	private Mustache template; 
+	
+	public MustacheTemplateInjector() {
+		mf = new DefaultMustacheFactory();
+	}
+	
+	
+	
+	public void compile(String fileLocation){
+		 template = mf.compile("template/html/EA.mustache");
+	}
 	
 	/**
 	 * 
@@ -26,9 +38,8 @@ public class MustacheTemplateInjector {
 	 * @param templateName
 	 * @return
 	 */
-	public String toHtml(String templateName) {
-		MustacheFactory mf = new DefaultMustacheFactory();
-		StringWriter mustacheExecutioner = new StringWriter();
+	public String toHtml(HashMap<String, Object> scopes) {
+		/*MustacheFactory mf = new DefaultMustacheFactory();
 		// Load html template from a saved location
 		Mustache template = mf.compile("template/html/EA.mustache");
 		// Use Mustache to create a template of type HTML from the input
@@ -56,11 +67,13 @@ public class MustacheTemplateInjector {
 		scopes.put("checked", "checked");
 		// This will fill in the data from the scopes HashMap we built into
 		// the html template
+*/		
+		StringWriter mustacheExecutioner = new StringWriter();
 		template.execute(mustacheExecutioner, scopes);
 		return mustacheExecutioner.toString();
 	}
 
-	public EAForm createEAForm(){	
+	/*public EAForm createEAForm(){	
 		EAMPNPerson endorser = createEndorser();
 		EAForm eaForm = new EAForm(createEndorser(),createReference1(),createReference2(),createBorrower(),createStudent(), createSchool(), createEmployer());
 		return eaForm;
@@ -158,101 +171,6 @@ public class MustacheTemplateInjector {
 		endorser.setAlienReg("VGVHG748320932");
 		return endorser;
 	}
-	 static class MustacheTemplateInjectorHelper {
-		   
-		    	String isUSCitzen;
-		    	String isPermanentResidentOther;
-		    	String isReference1Address2;
-		    	String isReference2Address2;
-		    	String isBorrowerAddress2PTag;
-		    	String isBorrowerAddress2PTagEnd;
-		    	String todaysDate;
-		    	
-				
-				public String getIsUSCitzen() {
-					return isUSCitzen;
-				}
-				public void setIsUSCitzen(String isUSCitzen) {
-					this.isUSCitzen = isUSCitzen;
-				}
-				public String getIsPermanentResidentOther() {
-					return isPermanentResidentOther;
-				}
-				public void setIsPermanentResidentOther(String isPermanentResidentOther) {
-					this.isPermanentResidentOther = isPermanentResidentOther;
-				}
-				
-				public void determineCitizenshipStatus(String endorserCitizenship){
-					switch(endorserCitizenship){
-					case "US":
-						setIsUSCitzen("checked");
-						setIsPermanentResidentOther("");
-						break;
-					case "OTHER":
-						setIsUSCitzen("");
-						setIsPermanentResidentOther("checked");
-						break;
-					}
-					
-				}
-				public String getIsReference1Address2() {
-					return isReference1Address2;
-				}
-				
-				public void determineReference1Address2(String addressLine2){
-					if(addressLine2 != null && !addressLine2.isEmpty() ){
-						setIsReference1Address2(", ");
-						return;
-					}
-						setIsReference1Address2("");
-				}
-				public void determineReference2Address2(String addressLine2){
-					if(addressLine2 != null && !addressLine2.isEmpty() ){
-						setIsReference2Address2(", ");
-						return;
-					}
-						setIsReference2Address2("");
-				}
-				
-				public void setIsReference1Address2(String isReference1Address2) {
-					this.isReference1Address2 = isReference1Address2;
-				}
-				public String getIsReference2Address2() {
-					return isReference2Address2;
-				}
-				public void setIsReference2Address2(String isReference2Address2) {
-					this.isReference2Address2 = isReference2Address2;
-				}
-				
-				public void determineBorrowerAddress2Tag(String addressLine2){
-					if(addressLine2 != null && !addressLine2.isEmpty() ){
-						 setIsBorrowerAddress2PTag("<p class=\"field-response-padding\">");
-						setIsBorrowerAddress2PTagEnd("</p>");		
-						return;
-					}
-					 setIsBorrowerAddress2PTag("");
-						setIsBorrowerAddress2PTagEnd("");						}
-				
-				public String getIsBorrowerAddress2PTag() {
-					return isBorrowerAddress2PTag;
-				}
-				public void setIsBorrowerAddress2PTag(String isBorrowerAddress2PTag) {
-					this.isBorrowerAddress2PTag = isBorrowerAddress2PTag;
-				}
-				public String getIsBorrowerAddress2PTagEnd() {
-					return isBorrowerAddress2PTagEnd;
-				}
-				public void setIsBorrowerAddress2PTagEnd(String isBorrowerAddress2PTagEnd) {
-					this.isBorrowerAddress2PTagEnd = isBorrowerAddress2PTagEnd;
-				}
-				public String getTodaysDate() {
-					return todaysDate;
-				}
-				public void setTodaysDate() {
-					this.todaysDate = Calendar.getInstance().getTime().toString();
-				}
-		    	
-	 }
 	 
 	 static class Person {
 		    Person(String name) {
@@ -260,6 +178,6 @@ public class MustacheTemplateInjector {
 		    }
 		    String name;
 		  }
-}
+*/}
 
 
