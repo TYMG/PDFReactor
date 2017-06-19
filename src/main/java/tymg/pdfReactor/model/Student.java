@@ -8,7 +8,7 @@
  */
  
 
-package gov.ed.fsa.model;
+package tymg.pdfReactor.model;
 
 public class Student implements Person {
 

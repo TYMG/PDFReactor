@@ -1,6 +1,6 @@
-package gov.ed.fsa.service;
+package tymg.pdfReactor.service;
 
-import gov.ed.fsa.form.EAForm;
+import tymg.pdfReactor.form.EAForm;
 
 public interface DocumentService {
 	public byte[] createEADocument(EAForm form);
