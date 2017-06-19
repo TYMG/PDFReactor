@@ -1,9 +1,8 @@
-package gov.ed.fsa.controller;
+package tymg.pdfReactor.controller;
 
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.core.io.ByteArrayResource;
-import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -15,11 +14,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import gov.ed.fsa.form.CorrespondenceForm;
-import gov.ed.fsa.form.EAForm;
-import gov.ed.fsa.form.Form;
-import gov.ed.fsa.model.Greeting;
-import gov.ed.fsa.service.DocumentService;
+import tymg.pdfReactor.form.CorrespondenceForm;
+import tymg.pdfReactor.form.EAForm;
+import tymg.pdfReactor.form.Form;
+import tymg.pdfReactor.model.Greeting;
+import tymg.pdfReactor.service.DocumentService;
+import tymg.pdfReactor.service.DocumentServiceImpl;
 
 
 
@@ -30,8 +30,9 @@ public class DocumentationCreationController {
 	
 	private DocumentService docService; 
 
+	
 
-	 private static final String template = "Hello, %s!";
+	private static final String template = "Hello, %s!";
 	    private final AtomicLong counter = new AtomicLong();
 
 	    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
@@ -53,7 +54,7 @@ public class DocumentationCreationController {
 	    	 return ResponseEntity
 	                 .ok()
 	                 .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\\EA\\")
-	                 .body(new ByteArrayResource(docService.createEADocument(form)));
+	                 .body(new ByteArrayResource(getDocService().createEADocument(form)));
 	    }
 	    
 	    @RequestMapping(value = "/MPN/{mpnType}", method = RequestMethod.POST)
@@ -62,6 +63,18 @@ public class DocumentationCreationController {
 	    	return null;
 	    }
 	    
+	    
+
+		public DocumentService getDocService() {
+			if(docService==null){
+				docService = new DocumentServiceImpl();
+			}
+			return docService;
+		}
+
+		public void setDocService(DocumentService docService) {
+			this.docService = docService;
+		}
 	    /*@RequestMapping(value = "/TEST", method = RequestMethod.POST)
 	    public ResponseEntity<Form> createTestDocument(@RequestBody TestForm form ){
 	    	System.out.println("Create Test Document Hit With:");

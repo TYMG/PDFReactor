@@ -1,15 +1,17 @@
-package gov.ed.fsa.form;
+package tymg.pdfReactor.form;
 
-import gov.ed.fsa.model.Borrower;
-import gov.ed.fsa.model.EAMPNPerson;
-import gov.ed.fsa.model.Employer;
-import gov.ed.fsa.model.Reference;
-import gov.ed.fsa.model.School;
-import gov.ed.fsa.model.Student;
+import tymg.pdfReactor.model.Borrower;
+import tymg.pdfReactor.model.EAMPNPerson;
+import tymg.pdfReactor.model.Employer;
+import tymg.pdfReactor.model.Reference;
+import tymg.pdfReactor.model.School;
+import tymg.pdfReactor.model.Student;
 
 public class EAForm  {
 	
-	public EAForm(EAMPNPerson endorser, Reference reference1, Reference reference2, Borrower borrower, Student student, School school, Employer employer){
+/*public EAForm(EAMPNPerson endorser, Reference reference1, Reference reference2, Borrower borrower, Student student, School school, Employer employer){
+		public EAForm(EAMPNPerson endorser){
+
 		this.endorser = endorser;
 		this.reference1 = reference1;
 		this.reference2 = reference2;
@@ -17,7 +19,7 @@ public class EAForm  {
 		this.student = student;
 		this.school = school;
 		this.employer = employer;
-	}
+	}*/
 
 	private EAMPNPerson endorser;
 	private Reference reference1;
@@ -70,8 +72,5 @@ public class EAForm  {
 	public void setEmployer(Employer employer) {
 		this.employer = employer;
 	}
-
-	
-	
 
 }

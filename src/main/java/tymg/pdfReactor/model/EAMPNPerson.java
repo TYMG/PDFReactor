@@ -1,15 +1,16 @@
-package gov.ed.fsa.model;
+package tymg.pdfReactor.model;
 
 public class EAMPNPerson{
 	
 	private String name;
 	private String addressLine1;
 	private String addressLine2;
-	private String cityStateZip;
+	private String city;
+	private String state;
+	private String zip;
 	private String ssn;
 	private String phoneNumber;
 	private String dob;
-	private String selfID;
 	private String dlState;
 	private String dlNum;
 	private String email;
@@ -17,12 +18,16 @@ public class EAMPNPerson{
 	private String alienReg;
 	private String mailingAddressLine1;
 	private String mailingAddressLine2;
-	private String mailingCityStateZip;
+	private String mailingCity;
+	private String mailingState;
+	private String mailingZip;
+
 
 	
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -38,13 +43,7 @@ public class EAMPNPerson{
 	public void setAddressLine2(String addressLine2) {
 		this.addressLine2 = addressLine2;
 	}
-	public String getCityStateZip() {
-		return cityStateZip;
-	}
-	public void setCityStateZip(String cityStateZip) {
-		this.cityStateZip = cityStateZip;
-	}
-	
+
 	public String getSsn() {
 		return ssn;
 	}
@@ -63,12 +62,7 @@ public class EAMPNPerson{
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
-	public String getSelfID() {
-		return selfID;
-	}
-	public void setSelfID(String selfID) {
-		this.selfID = selfID;
-	}
+
 	public String getDlState() {
 		return dlState;
 	}
@@ -111,11 +105,45 @@ public class EAMPNPerson{
 	public void setMailingAddressLine2(String mailingAddressLine2) {
 		this.mailingAddressLine2 = mailingAddressLine2;
 	}
-	public String getMailingCityStateZip() {
-		return mailingCityStateZip;
+
+	
+	public String getCity() {
+		return city;
 	}
-	public void setMailingCityStateZip(String mailingCityStateZipCode) {
-		this.mailingCityStateZip = mailingCityStateZipCode;
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+	
+	public String getZip() {
+		return zip;
+	}
+	public String getMailingCity() {
+		return mailingCity;
+	}
+	public void setMailingCity(String mailingCity) {
+		this.mailingCity = mailingCity;
+	}
+	public String getMailingState() {
+		return mailingState;
+	}
+	public void setMailingState(String mailingState) {
+		this.mailingState = mailingState;
+	}
+	public String getMailingZip() {
+		return mailingZip;
+	}
+	public void setMailingZip(String mailingZip) {
+		this.mailingZip = mailingZip;
 	}
 
 }

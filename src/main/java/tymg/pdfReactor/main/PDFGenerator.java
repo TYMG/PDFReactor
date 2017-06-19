@@ -1,4 +1,4 @@
-package gov.ed.fsa;
+package tymg.pdfReactor.main;
 
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
@@ -56,7 +56,7 @@ public class PDFGenerator {
 			
 			pdfBytes  = result.getDocument();
 			
-			FileUtils.writeByteArrayToFile(new File("C://Users//Matthew.A.Green/Documents/PDF Reactor/EA (with Icon).pdf"), pdfBytes);
+			FileUtils.writeByteArrayToFile(new File("C://Users//Matthew.A.Green/Documents/PDF Reactor/Brown Bag Demo EA(with Icon).pdf"), pdfBytes);
 					
 		} catch (PDFreactorException e) {
 			// TODO Auto-generated catch block

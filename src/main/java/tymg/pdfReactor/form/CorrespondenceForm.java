@@ -1,12 +1,12 @@
-package gov.ed.fsa.form;
+package tymg.pdfReactor.form;
 
 import java.util.List;
 
-import gov.ed.fsa.model.Borrower;
-import gov.ed.fsa.model.CreditBureau;
-import gov.ed.fsa.model.Endorser;
-import gov.ed.fsa.model.School;
-import gov.ed.fsa.model.Student;
+import tymg.pdfReactor.model.Borrower;
+import tymg.pdfReactor.model.CreditBureau;
+import tymg.pdfReactor.model.Endorser;
+import tymg.pdfReactor.model.School;
+import tymg.pdfReactor.model.Student;
 
 public class CorrespondenceForm  {
 

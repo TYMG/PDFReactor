@@ -1,4 +1,4 @@
-package gov.ed.fsa.model;
+package tymg.pdfReactor.model;
 
 public interface Person {
 
